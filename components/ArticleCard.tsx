@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Post } from '@/lib/posts';
 import { getCategoryBySlug } from '@/lib/categories';
+import CategoryIcon from './CategoryIcon';
 
 interface ArticleCardProps {
   post: Post;
@@ -103,7 +104,7 @@ export default function ArticleCard({ post, variant = 'default' }: ArticleCardPr
                 ${getCategoryColor()} hover:opacity-90 transition-opacity shadow-lg
               `}
             >
-              {category.icon} {category.name}
+              <CategoryIcon name={category.icon} size={16} className="inline-block mr-1" /> {category.name}
             </Link>
           )}
         </div>
@@ -119,7 +120,7 @@ export default function ArticleCard({ post, variant = 'default' }: ArticleCardPr
                 ${getCategoryColor()} hover:opacity-90 transition-opacity
               `}
             >
-              {category.icon} {category.name}
+              <CategoryIcon name={category.icon} size={16} className="inline-block mr-1" /> {category.name}
             </Link>
           )}
 

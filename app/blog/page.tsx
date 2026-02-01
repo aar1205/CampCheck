@@ -3,6 +3,7 @@ import { getAllPosts } from '@/lib/posts';
 import { getAllCategories } from '@/lib/categories';
 import ArticleCard from '@/components/ArticleCard';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import CategoryIcon from '@/components/CategoryIcon';
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -56,7 +57,7 @@ export default function BlogPage() {
                       href="/blog"
                       className="flex items-center gap-3 px-3 py-2 rounded-md bg-green-50 text-green-700 font-semibold hover:bg-green-100 transition-colors"
                     >
-                      <span className="text-xl">📚</span>
+                      <CategoryIcon name="Layers" size={20} />
                       <span>Alle Artikel</span>
                       <span className="ml-auto text-sm">({allPosts.length})</span>
                     </a>
@@ -74,7 +75,7 @@ export default function BlogPage() {
                           href={`/kategorien/${category.slug}`}
                           className="flex items-center gap-3 px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
                         >
-                          <span className="text-xl">{category.icon}</span>
+                          <CategoryIcon name={category.icon} size={20} />
                           <span className="flex-grow">{category.name}</span>
                           <span className="text-sm text-gray-500">
                             ({categoryPostCount})
@@ -107,7 +108,9 @@ export default function BlogPage() {
             {/* Empty State (if no posts) */}
             {sortedPosts.length === 0 && (
               <div className="text-center py-12">
-                <div className="text-6xl mb-4">📝</div>
+                <div className="text-gray-400 mb-4 flex justify-center">
+                  <CategoryIcon name="FileQuestion" size={64} />
+                </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">
                   Keine Artikel gefunden
                 </h2>

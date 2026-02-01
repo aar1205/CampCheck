@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import { getCategoryBySlug } from '@/lib/categories';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import CategoryIcon from '@/components/CategoryIcon';
 import TableOfContents from '@/components/TableOfContents';
 import RelatedPosts from '@/components/RelatedPosts';
 
@@ -265,7 +266,7 @@ export default function BlogArticlePage({ params }: PageProps) {
                 href={`/kategorien/${category.slug}`}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors mb-6"
               >
-                <span className="text-xl">{category.icon}</span>
+                <CategoryIcon name={category.icon} size={20} />
                 <span>{category.name}</span>
               </Link>
             )}

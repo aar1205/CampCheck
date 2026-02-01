@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { getAllCategories } from '@/lib/categories';
+import CategoryIcon from './CategoryIcon';
 
 export default function Footer() {
   const categories = getAllCategories();
@@ -85,7 +86,7 @@ export default function Footer() {
                     href={`/kategorien/${category.slug}`}
                     className="text-sm text-parchment hover:text-amber-light transition-colors flex items-center "
                   >
-                    <span className="mr-2 text-base">{category.icon}</span>
+                    <CategoryIcon name={category.icon} size={16} className="mr-2" />
                     {category.name}
                   </Link>
                 </li>
