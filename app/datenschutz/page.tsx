@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Datenschutzerklärung',
-  description: 'Datenschutzerklärung von CampingBlog. Informationen zur Erhebung, Verarbeitung und Nutzung personenbezogener Daten gemäß DSGVO.',
+  description: 'Datenschutzerklärung von CampCheck. Informationen zur Erhebung, Verarbeitung und Nutzung personenbezogener Daten gemäß DSGVO.',
   openGraph: {
-    title: 'Datenschutzerklärung - CampingBlog',
-    description: 'Datenschutzerklärung von CampingBlog. Informationen zur Erhebung, Verarbeitung und Nutzung personenbezogener Daten gemäß DSGVO.',
+    title: 'Datenschutzerklärung - CampCheck',
+    description: 'Datenschutzerklärung von CampCheck. Informationen zur Erhebung, Verarbeitung und Nutzung personenbezogener Daten gemäß DSGVO.',
   },
 };
 

@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Impressum',
-  description: 'Impressum von CampingBlog. Angaben gemäß § 5 TMG (Telemediengesetz) - Informationspflichten nach deutschem Recht.',
+  description: 'Impressum von CampCheck. Angaben gemäß § 5 TMG (Telemediengesetz) - Informationspflichten nach deutschem Recht.',
   openGraph: {
-    title: 'Impressum - CampingBlog',
-    description: 'Impressum von CampingBlog. Angaben gemäß § 5 TMG (Telemediengesetz) - Informationspflichten nach deutschem Recht.',
+    title: 'Impressum - CampCheck',
+    description: 'Impressum von CampCheck. Angaben gemäß § 5 TMG (Telemediengesetz) - Informationspflichten nach deutschem Recht.',
   },
 };
 

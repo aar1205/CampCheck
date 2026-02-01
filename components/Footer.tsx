@@ -15,7 +15,7 @@ export default function Footer() {
           {/* About Section */}
           <div>
             <h3 className="text-2xl  font-extrabold mb-5 text-amber tracking-tight">
-              CampingBlog
+              CampCheck
             </h3>
             <p className="text-sm leading-relaxed text-parchment ">
               Dein Ratgeber für unvergessliche Camping-Abenteuer. Wir teilen
@@ -196,7 +196,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}
             <div className="text-sm text-parchment  editorial-number">
-              © {currentYear} CampingBlog. Alle Rechte vorbehalten.
+              © {currentYear} CampCheck. Alle Rechte vorbehalten.
             </div>
 
             {/* Legal Links */}

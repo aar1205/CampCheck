@@ -511,7 +511,7 @@ export default function ChecklistenPage() {
 
         {/* Print-specific footer */}
         <div className="hidden print:block mt-8 text-center text-sm text-gray-500">
-          <p>Camping-Checkliste von CampingBlog.de</p>
+          <p>Camping-Checkliste von CampCheck.de</p>
           <p>Gedruckt am: {new Date().toLocaleDateString('de-DE')}</p>
         </div>
       </div>

@@ -5,10 +5,10 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Über uns',
-  description: 'Lerne das CampingBlog-Team kennen. Erfahre mehr über unsere Mission, unsere Leidenschaft für Outdoor-Abenteuer und warum wir diesen Blog gestartet haben.',
+  description: 'Lerne das CampCheck-Team kennen. Erfahre mehr über unsere Mission, unsere Leidenschaft für Outdoor-Abenteuer und warum wir diesen Blog gestartet haben.',
   openGraph: {
-    title: 'Über uns - CampingBlog Team',
-    description: 'Lerne das CampingBlog-Team kennen. Erfahre mehr über unsere Mission, unsere Leidenschaft für Outdoor-Abenteuer und warum wir diesen Blog gestartet haben.',
+    title: 'Über uns - CampCheck Team',
+    description: 'Lerne das CampCheck-Team kennen. Erfahre mehr über unsere Mission, unsere Leidenschaft für Outdoor-Abenteuer und warum wir diesen Blog gestartet haben.',
   },
 };
 
@@ -52,7 +52,7 @@ export default function AboutPage() {
             Über uns
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Willkommen bei CampingBlog – deiner Quelle für authentische Camping-Erlebnisse,
+            Willkommen bei CampCheck – deiner Quelle für authentische Camping-Erlebnisse,
             ehrliche Ausrüstungs-Tests und inspirierende Outdoor-Geschichten.
           </p>
         </header>
@@ -85,7 +85,7 @@ export default function AboutPage() {
             </div>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed mb-4">
-                Bei CampingBlog glauben wir daran, dass die besten Momente im Leben draußen passieren –
+                Bei CampCheck glauben wir daran, dass die besten Momente im Leben draußen passieren –
                 unter freiem Himmel, am knisternden Lagerfeuer, mit dem Duft von Kiefernnadeln in der Luft.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -117,7 +117,7 @@ export default function AboutPage() {
             </div>
             <div className="space-y-4 text-gray-700">
               <p className="leading-relaxed">
-                CampingBlog entstand 2019 aus einer einfachen Idee: Wir saßen nach einer
+                CampCheck entstand 2019 aus einer einfachen Idee: Wir saßen nach einer
                 dreitägigen Wandertour in den Dolomiten am Lagerfeuer und tauschten unsere
                 Erfahrungen aus. Dabei stellten wir fest, wie wertvoll echte, praxiserprobte
                 Tipps sind – und wie schwer sie online zu finden waren.
@@ -202,7 +202,7 @@ export default function AboutPage() {
               Unser Team
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Lerne die Menschen kennen, die hinter CampingBlog stecken und
+              Lerne die Menschen kennen, die hinter CampCheck stecken und
               ihre Leidenschaft für das Outdoor-Leben mit dir teilen.
             </p>
           </div>

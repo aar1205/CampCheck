@@ -16,7 +16,7 @@ export default function Header() {
   // Handle scroll effect for sticky header
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 80);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -54,10 +54,10 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 backdrop-blur-premium ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-paper/95 shadow-lg'
-          : 'bg-paper/90 border-b border-parchment'
+          ? 'bg-paper/95 backdrop-blur-premium shadow-lg'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,10 +66,14 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="text-2xl md:text-3xl  font-extrabold text-forest-deep hover:text-amber-dark transition-colors tracking-tight"
+              className={`text-2xl md:text-3xl font-extrabold transition-colors tracking-tight ${
+                isScrolled
+                  ? 'text-forest-deep hover:text-amber-dark'
+                  : 'text-paper hover:text-amber-light'
+              }`}
               onClick={handleLinkClick}
             >
-              CampingBlog
+              CampCheck
             </Link>
           </div>
 
@@ -77,14 +81,22 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-8">
             <Link
               href="/"
-              className="text-charcoal hover:text-amber-dark  font-semibold transition-colors tracking-tight"
+              className={`font-semibold transition-colors tracking-tight ${
+                isScrolled
+                  ? 'text-charcoal hover:text-amber-dark'
+                  : 'text-paper hover:text-amber-light'
+              }`}
             >
               Home
             </Link>
 
             <Link
               href="/blog"
-              className="text-charcoal hover:text-amber-dark  font-semibold transition-colors tracking-tight"
+              className={`font-semibold transition-colors tracking-tight ${
+                isScrolled
+                  ? 'text-charcoal hover:text-amber-dark'
+                  : 'text-paper hover:text-amber-light'
+              }`}
             >
               Blog
             </Link>
@@ -93,7 +105,11 @@ export default function Header() {
             <div className="relative" ref={categoriesRef}>
               <button
                 onClick={() => setIsCategoriesOpen(!isCategoriesOpen)}
-                className="flex items-center text-charcoal hover:text-amber-dark  font-semibold transition-colors tracking-tight"
+                className={`flex items-center font-semibold transition-colors tracking-tight ${
+                  isScrolled
+                    ? 'text-charcoal hover:text-amber-dark'
+                    : 'text-paper hover:text-amber-light'
+                }`}
                 aria-expanded={isCategoriesOpen}
                 aria-haspopup="true"
               >
@@ -141,28 +157,44 @@ export default function Header() {
 
             <Link
               href="/checklisten"
-              className="text-charcoal hover:text-amber-dark  font-semibold transition-colors tracking-tight"
+              className={`font-semibold transition-colors tracking-tight ${
+                isScrolled
+                  ? 'text-charcoal hover:text-amber-dark'
+                  : 'text-paper hover:text-amber-light'
+              }`}
             >
               Checklisten
             </Link>
 
             <Link
               href="/ueber-uns"
-              className="text-charcoal hover:text-amber-dark  font-semibold transition-colors tracking-tight"
+              className={`font-semibold transition-colors tracking-tight ${
+                isScrolled
+                  ? 'text-charcoal hover:text-amber-dark'
+                  : 'text-paper hover:text-amber-light'
+              }`}
             >
               Über uns
             </Link>
 
             <Link
               href="/kontakt"
-              className="text-charcoal hover:text-amber-dark  font-semibold transition-colors tracking-tight"
+              className={`font-semibold transition-colors tracking-tight ${
+                isScrolled
+                  ? 'text-charcoal hover:text-amber-dark'
+                  : 'text-paper hover:text-amber-light'
+              }`}
             >
               Kontakt
             </Link>
 
             {/* Search Icon */}
             <button
-              className="text-charcoal hover:text-amber-dark transition-colors"
+              className={`transition-colors ${
+                isScrolled
+                  ? 'text-charcoal hover:text-amber-dark'
+                  : 'text-paper hover:text-amber-light'
+              }`}
               aria-label="Search"
             >
               <svg
@@ -183,7 +215,11 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden hamburger-button p-2 rounded-sm text-charcoal hover:text-amber-dark hover:bg-amber/10 transition-colors"
+            className={`md:hidden hamburger-button p-2 rounded-sm transition-colors ${
+              isScrolled
+                ? 'text-charcoal hover:text-amber-dark hover:bg-amber/10'
+                : 'text-paper hover:text-amber-light hover:bg-paper/10'
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
             aria-expanded={isMobileMenuOpen}
@@ -224,12 +260,20 @@ export default function Header() {
         {isMobileMenuOpen && (
           <div
             ref={mobileMenuRef}
-            className="md:hidden border-t border-parchment py-4"
+            className={`md:hidden border-t py-4 ${
+              isScrolled
+                ? 'border-parchment bg-paper/95'
+                : 'border-paper/30 bg-forest-deep/95 backdrop-blur-premium'
+            }`}
           >
             <nav className="flex flex-col gap-2">
               <Link
                 href="/"
-                className="px-4 py-3 text-charcoal hover:bg-amber/10 hover:text-amber-dark rounded-sm transition-colors  font-semibold"
+                className={`px-4 py-3 rounded-sm transition-colors font-semibold ${
+                  isScrolled
+                    ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
+                    : 'text-paper hover:bg-paper/10 hover:text-amber-light'
+                }`}
                 onClick={handleLinkClick}
               >
                 Home
@@ -237,7 +281,11 @@ export default function Header() {
 
               <Link
                 href="/blog"
-                className="px-4 py-3 text-charcoal hover:bg-amber/10 hover:text-amber-dark rounded-sm transition-colors  font-semibold"
+                className={`px-4 py-3 rounded-sm transition-colors font-semibold ${
+                  isScrolled
+                    ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
+                    : 'text-paper hover:bg-paper/10 hover:text-amber-light'
+                }`}
                 onClick={handleLinkClick}
               >
                 Blog
@@ -247,7 +295,11 @@ export default function Header() {
               <div>
                 <button
                   onClick={() => setIsCategoriesOpen(!isCategoriesOpen)}
-                  className="w-full flex items-center justify-between px-4 py-3 text-charcoal hover:bg-amber/10 hover:text-amber-dark rounded-sm transition-colors  font-semibold"
+                  className={`w-full flex items-center justify-between px-4 py-3 rounded-sm transition-colors font-semibold ${
+                    isScrolled
+                      ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
+                      : 'text-paper hover:bg-paper/10 hover:text-amber-light'
+                  }`}
                 >
                   Kategorien
                   <svg
@@ -271,7 +323,11 @@ export default function Header() {
                   <div className="mt-2 ml-4 flex flex-col gap-1">
                     <Link
                       href="/kategorien"
-                      className="block px-4 py-2 text-charcoal hover:bg-amber/10 hover:text-amber-dark rounded-sm transition-colors  text-sm"
+                      className={`block px-4 py-2 rounded-sm transition-colors text-sm ${
+                        isScrolled
+                          ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
+                          : 'text-paper hover:bg-paper/10 hover:text-amber-light'
+                      }`}
                       onClick={handleLinkClick}
                     >
                       Alle Kategorien
@@ -280,7 +336,11 @@ export default function Header() {
                       <Link
                         key={category.slug}
                         href={`/kategorien/${category.slug}`}
-                        className="block px-4 py-2 text-charcoal hover:bg-amber/10 hover:text-amber-dark rounded-sm transition-colors  text-sm"
+                        className={`block px-4 py-2 rounded-sm transition-colors text-sm ${
+                          isScrolled
+                            ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
+                            : 'text-paper hover:bg-paper/10 hover:text-amber-light'
+                        }`}
                         onClick={handleLinkClick}
                       >
                         <span className="mr-2">{category.icon}</span>
@@ -293,7 +353,11 @@ export default function Header() {
 
               <Link
                 href="/checklisten"
-                className="px-4 py-3 text-charcoal hover:bg-amber/10 hover:text-amber-dark rounded-sm transition-colors  font-semibold"
+                className={`px-4 py-3 rounded-sm transition-colors font-semibold ${
+                  isScrolled
+                    ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
+                    : 'text-paper hover:bg-paper/10 hover:text-amber-light'
+                }`}
                 onClick={handleLinkClick}
               >
                 Checklisten
@@ -301,7 +365,11 @@ export default function Header() {
 
               <Link
                 href="/ueber-uns"
-                className="px-4 py-3 text-charcoal hover:bg-amber/10 hover:text-amber-dark rounded-sm transition-colors  font-semibold"
+                className={`px-4 py-3 rounded-sm transition-colors font-semibold ${
+                  isScrolled
+                    ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
+                    : 'text-paper hover:bg-paper/10 hover:text-amber-light'
+                }`}
                 onClick={handleLinkClick}
               >
                 Über uns
@@ -309,7 +377,11 @@ export default function Header() {
 
               <Link
                 href="/kontakt"
-                className="px-4 py-3 text-charcoal hover:bg-amber/10 hover:text-amber-dark rounded-sm transition-colors  font-semibold"
+                className={`px-4 py-3 rounded-sm transition-colors font-semibold ${
+                  isScrolled
+                    ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
+                    : 'text-paper hover:bg-paper/10 hover:text-amber-light'
+                }`}
                 onClick={handleLinkClick}
               >
                 Kontakt
@@ -317,7 +389,11 @@ export default function Header() {
 
               {/* Mobile Search */}
               <button
-                className="px-4 py-3 text-charcoal hover:bg-amber/10 hover:text-amber-dark rounded-sm transition-colors flex items-center  font-semibold"
+                className={`px-4 py-3 rounded-sm transition-colors flex items-center font-semibold ${
+                  isScrolled
+                    ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
+                    : 'text-paper hover:bg-paper/10 hover:text-amber-light'
+                }`}
                 aria-label="Search"
               >
                 <svg

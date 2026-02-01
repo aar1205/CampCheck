@@ -27,21 +27,21 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "CampingBlog - Dein Guide für Camping & Outdoor",
-    template: "%s | CampingBlog",
+    default: "CampCheck - Dein Guide für Camping & Outdoor",
+    template: "%s | CampCheck",
   },
   description:
     "Entdecke die besten Camping-Tipps, Ausrüstungsguides und Campingplatz-Empfehlungen für unvergessliche Outdoor-Abenteuer.",
   keywords: ["camping", "outdoor", "zelten", "campingplatz", "ausrüstung"],
-  authors: [{ name: "CampingBlog Team" }],
-  creator: "CampingBlog",
-  publisher: "CampingBlog",
+  authors: [{ name: "CampCheck Team" }],
+  creator: "CampCheck",
+  publisher: "CampCheck",
   openGraph: {
     type: "website",
     locale: "de_DE",
-    url: "https://campingblog.de",
-    siteName: "CampingBlog",
-    title: "CampingBlog - Dein Guide für Camping & Outdoor",
+    url: "https://campcheck.de",
+    siteName: "CampCheck",
+    title: "CampCheck - Dein Guide für Camping & Outdoor",
     description:
       "Entdecke die besten Camping-Tipps, Ausrüstungsguides und Campingplatz-Empfehlungen für unvergessliche Outdoor-Abenteuer.",
     images: [
@@ -49,13 +49,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "CampingBlog",
+        alt: "CampCheck",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CampingBlog - Dein Guide für Camping & Outdoor",
+    title: "CampCheck - Dein Guide für Camping & Outdoor",
     description:
       "Entdecke die besten Camping-Tipps, Ausrüstungsguides und Campingplatz-Empfehlungen für unvergessliche Outdoor-Abenteuer.",
     images: ["/og-image.jpg"],
