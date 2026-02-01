@@ -12,28 +12,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Team members data
-const teamMembers = [
-  {
-    name: 'Markus Weber',
-    role: 'Gründer & Outdoor-Experte',
-    bio: 'Mit über 15 Jahren Camping-Erfahrung teilt Markus seine Leidenschaft für das Leben in der Natur. Von Skandinavien bis zu den Alpen – er kennt die besten Spots und testet regelmäßig neue Ausrüstung.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&auto=format',
-  },
-  {
-    name: 'Sarah Hoffmann',
-    role: 'Content-Strategin & Vanlife-Enthusiastin',
-    bio: 'Sarah lebt seit 3 Jahren im umgebauten Campervan und reist durch Europa. Sie schreibt über nachhaltiges Camping, Vanlife-Tipps und die schönsten Stellplätze abseits der Massen.',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&auto=format',
-  },
-  {
-    name: 'Thomas Schneider',
-    role: 'Ausrüstungs-Reviewer & Bushcraft-Trainer',
-    bio: 'Als zertifizierter Bushcraft-Trainer testet Thomas Camping-Equipment auf Herz und Nieren. Seine ehrlichen Reviews helfen dir, die richtige Ausrüstung für deine Bedürfnisse zu finden.',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&auto=format',
-  },
-];
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white pt-24">
@@ -192,51 +170,6 @@ export default function AboutPage() {
                 Europa und darüber hinaus.
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* Team Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Unser Team
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Lerne die Menschen kennen, die hinter CampCheck stecken und
-              ihre Leidenschaft für das Outdoor-Leben mit dir teilen.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-              >
-                {/* Team Member Photo */}
-                <div className="relative h-64 w-full">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                {/* Team Member Info */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-[var(--color-pine)] font-semibold mb-4">
-                    {member.role}
-                  </p>
-                  <p className="text-gray-600 leading-relaxed">
-                    {member.bio}
-                  </p>
-                </div>
-              </div>
-            ))}
           </div>
         </section>
 
