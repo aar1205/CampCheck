@@ -49,7 +49,7 @@ export default function KontaktPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white pt-24">
       <div className="container mx-auto px-4 py-8 max-w-7xl">
         {/* Breadcrumbs */}
         <Breadcrumbs

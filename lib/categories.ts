@@ -10,43 +10,43 @@ export const categories: Category[] = [
     slug: 'camping-grundlagen',
     name: 'Camping-Grundlagen',
     description: 'Alles für den perfekten Einstieg ins Camping',
-    icon: '🏕️'
+    icon: 'Tent'
   },
   {
     slug: 'ausruestung-gear',
     name: 'Ausrüstung & Gear',
     description: 'Die beste Ausrüstung für dein Camping-Abenteuer',
-    icon: '🎒'
+    icon: 'Backpack'
   },
   {
     slug: 'zelte-schlafen',
     name: 'Zelte & Schlafen',
     description: 'Alles rund um Zelte, Schlafsäcke und erholsamen Schlaf',
-    icon: '⛺'
+    icon: 'Moon'
   },
   {
     slug: 'camping-kueche',
     name: 'Camping-Küche',
     description: 'Leckere Rezepte und Kochtipps für draußen',
-    icon: '🍳'
+    icon: 'Flame'
   },
   {
     slug: 'camping-familie',
     name: 'Camping mit Familie',
     description: 'Tipps und Tricks für unvergessliche Familien-Campingurlaube',
-    icon: '👨‍👩‍👧‍👦'
+    icon: 'Users'
   },
   {
     slug: 'wildcamping',
     name: 'Wildcamping',
     description: 'Abenteuer abseits der Campingplätze - Tipps und rechtliche Infos',
-    icon: '🌲'
+    icon: 'TreePine'
   },
   {
     slug: 'campingplaetze',
     name: 'Campingplätze',
     description: 'Die schönsten Campingplätze in Deutschland und Europa',
-    icon: '🗺️'
+    icon: 'MapPin'
   }
 ];
 

@@ -227,7 +227,7 @@ export default function BlogArticlePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <article className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      <article className="min-h-screen bg-gradient-to-b from-green-50 to-white pt-16 md:pt-20">
         {/* Hero Image */}
         <div className="relative w-full h-[400px] md:h-[500px] bg-gray-900">
           <Image

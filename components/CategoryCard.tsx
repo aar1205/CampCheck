@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Category } from '@/lib/categories';
+import CategoryIcon from './CategoryIcon';
 
 interface CategoryCardProps {
   category: Category;
@@ -37,8 +38,14 @@ export default function CategoryCard({ category, articleCount }: CategoryCardPro
           rounded-t-lg p-8 flex items-center justify-center
           group-hover:opacity-90 transition-opacity
         `}>
-          <div className="text-7xl transform group-hover:scale-110 transition-transform duration-300">
-            {category.icon}
+          <div className="relative">
+            {/* Glow effect */}
+            <div className="absolute inset-0 blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500 bg-white rounded-full" />
+
+            {/* Icon with animation */}
+            <div className="relative text-white transform transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-6">
+              <CategoryIcon name={category.icon} size={64} className="drop-shadow-lg" />
+            </div>
           </div>
         </div>
 

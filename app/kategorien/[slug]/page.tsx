@@ -4,6 +4,7 @@ import { getCategoryBySlug, getAllCategories } from '@/lib/categories';
 import { getPostsByCategory } from '@/lib/posts';
 import ArticleCard from '@/components/ArticleCard';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import CategoryIcon from '@/components/CategoryIcon';
 
 interface CategoryPageProps {
   params: Promise<{
@@ -44,7 +45,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const posts = getPostsByCategory(slug);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white pt-24">
       <div className="container mx-auto px-4 py-8 max-w-7xl">
         {/* Breadcrumbs */}
         <Breadcrumbs
@@ -58,7 +59,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         {/* Category Header */}
         <header className="mb-12 mt-6">
           <div className="flex items-center gap-4 mb-4">
-            <span className="text-6xl" aria-hidden="true">{category.icon}</span>
+            <div className="text-green-600">
+              <CategoryIcon name={category.icon} size={64} />
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
               {category.name}
             </h1>
@@ -85,7 +88,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         ) : (
           // Empty State
           <div className="text-center py-16">
-            <div className="text-6xl mb-4">{category.icon}</div>
+            <div className="text-green-600 mb-4 flex justify-center">
+              <CategoryIcon name={category.icon} size={64} />
+            </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-2">
               Noch keine Artikel
             </h2>

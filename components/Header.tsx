@@ -2,7 +2,9 @@
 
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import { getAllCategories } from '@/lib/categories';
+import CategoryIcon from './CategoryIcon';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,7 +13,13 @@ export default function Header() {
   const categoriesRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
   const categories = getAllCategories();
+
+  // Determine if header should show solid background
+  // On homepage: transparent until scrolled, on other pages: always solid
+  const showSolidHeader = !isHomePage || isScrolled;
 
   // Handle scroll effect for sticky header
   useEffect(() => {
@@ -55,7 +63,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        showSolidHeader
           ? 'bg-paper/95 backdrop-blur-premium shadow-lg'
           : 'bg-transparent'
       }`}
@@ -67,7 +75,7 @@ export default function Header() {
             <Link
               href="/"
               className={`text-2xl md:text-3xl font-extrabold transition-colors tracking-tight ${
-                isScrolled
+                showSolidHeader
                   ? 'text-forest-deep hover:text-amber-dark'
                   : 'text-paper hover:text-amber-light'
               }`}
@@ -82,7 +90,7 @@ export default function Header() {
             <Link
               href="/"
               className={`font-semibold transition-colors tracking-tight ${
-                isScrolled
+                showSolidHeader
                   ? 'text-charcoal hover:text-amber-dark'
                   : 'text-paper hover:text-amber-light'
               }`}
@@ -93,7 +101,7 @@ export default function Header() {
             <Link
               href="/blog"
               className={`font-semibold transition-colors tracking-tight ${
-                isScrolled
+                showSolidHeader
                   ? 'text-charcoal hover:text-amber-dark'
                   : 'text-paper hover:text-amber-light'
               }`}
@@ -106,7 +114,7 @@ export default function Header() {
               <button
                 onClick={() => setIsCategoriesOpen(!isCategoriesOpen)}
                 className={`flex items-center font-semibold transition-colors tracking-tight ${
-                  isScrolled
+                  showSolidHeader
                     ? 'text-charcoal hover:text-amber-dark'
                     : 'text-paper hover:text-amber-light'
                 }`}
@@ -144,10 +152,10 @@ export default function Header() {
                     <Link
                       key={category.slug}
                       href={`/kategorien/${category.slug}`}
-                      className="block px-4 py-2.5 text-charcoal hover:bg-amber/10 hover:text-amber-dark transition-colors "
+                      className="block px-4 py-2.5 text-charcoal hover:bg-amber/10 hover:text-amber-dark transition-colors flex items-center"
                       onClick={handleLinkClick}
                     >
-                      <span className="mr-2">{category.icon}</span>
+                      <CategoryIcon name={category.icon} size={18} className="mr-2" />
                       {category.name}
                     </Link>
                   ))}
@@ -158,7 +166,7 @@ export default function Header() {
             <Link
               href="/checklisten"
               className={`font-semibold transition-colors tracking-tight ${
-                isScrolled
+                showSolidHeader
                   ? 'text-charcoal hover:text-amber-dark'
                   : 'text-paper hover:text-amber-light'
               }`}
@@ -169,7 +177,7 @@ export default function Header() {
             <Link
               href="/ueber-uns"
               className={`font-semibold transition-colors tracking-tight ${
-                isScrolled
+                showSolidHeader
                   ? 'text-charcoal hover:text-amber-dark'
                   : 'text-paper hover:text-amber-light'
               }`}
@@ -180,7 +188,7 @@ export default function Header() {
             <Link
               href="/kontakt"
               className={`font-semibold transition-colors tracking-tight ${
-                isScrolled
+                showSolidHeader
                   ? 'text-charcoal hover:text-amber-dark'
                   : 'text-paper hover:text-amber-light'
               }`}
@@ -191,7 +199,7 @@ export default function Header() {
             {/* Search Icon */}
             <button
               className={`transition-colors ${
-                isScrolled
+                showSolidHeader
                   ? 'text-charcoal hover:text-amber-dark'
                   : 'text-paper hover:text-amber-light'
               }`}
@@ -216,7 +224,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             className={`md:hidden hamburger-button p-2 rounded-sm transition-colors ${
-              isScrolled
+              showSolidHeader
                 ? 'text-charcoal hover:text-amber-dark hover:bg-amber/10'
                 : 'text-paper hover:text-amber-light hover:bg-paper/10'
             }`}
@@ -261,7 +269,7 @@ export default function Header() {
           <div
             ref={mobileMenuRef}
             className={`md:hidden border-t py-4 ${
-              isScrolled
+              showSolidHeader
                 ? 'border-parchment bg-paper/95'
                 : 'border-paper/30 bg-forest-deep/95 backdrop-blur-premium'
             }`}
@@ -270,7 +278,7 @@ export default function Header() {
               <Link
                 href="/"
                 className={`px-4 py-3 rounded-sm transition-colors font-semibold ${
-                  isScrolled
+                  showSolidHeader
                     ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
                     : 'text-paper hover:bg-paper/10 hover:text-amber-light'
                 }`}
@@ -282,7 +290,7 @@ export default function Header() {
               <Link
                 href="/blog"
                 className={`px-4 py-3 rounded-sm transition-colors font-semibold ${
-                  isScrolled
+                  showSolidHeader
                     ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
                     : 'text-paper hover:bg-paper/10 hover:text-amber-light'
                 }`}
@@ -296,7 +304,7 @@ export default function Header() {
                 <button
                   onClick={() => setIsCategoriesOpen(!isCategoriesOpen)}
                   className={`w-full flex items-center justify-between px-4 py-3 rounded-sm transition-colors font-semibold ${
-                    isScrolled
+                    showSolidHeader
                       ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
                       : 'text-paper hover:bg-paper/10 hover:text-amber-light'
                   }`}
@@ -324,7 +332,7 @@ export default function Header() {
                     <Link
                       href="/kategorien"
                       className={`block px-4 py-2 rounded-sm transition-colors text-sm ${
-                        isScrolled
+                        showSolidHeader
                           ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
                           : 'text-paper hover:bg-paper/10 hover:text-amber-light'
                       }`}
@@ -336,14 +344,14 @@ export default function Header() {
                       <Link
                         key={category.slug}
                         href={`/kategorien/${category.slug}`}
-                        className={`block px-4 py-2 rounded-sm transition-colors text-sm ${
-                          isScrolled
+                        className={`flex items-center px-4 py-2 rounded-sm transition-colors text-sm ${
+                          showSolidHeader
                             ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
                             : 'text-paper hover:bg-paper/10 hover:text-amber-light'
                         }`}
                         onClick={handleLinkClick}
                       >
-                        <span className="mr-2">{category.icon}</span>
+                        <CategoryIcon name={category.icon} size={18} className="mr-2" />
                         {category.name}
                       </Link>
                     ))}
@@ -354,7 +362,7 @@ export default function Header() {
               <Link
                 href="/checklisten"
                 className={`px-4 py-3 rounded-sm transition-colors font-semibold ${
-                  isScrolled
+                  showSolidHeader
                     ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
                     : 'text-paper hover:bg-paper/10 hover:text-amber-light'
                 }`}
@@ -366,7 +374,7 @@ export default function Header() {
               <Link
                 href="/ueber-uns"
                 className={`px-4 py-3 rounded-sm transition-colors font-semibold ${
-                  isScrolled
+                  showSolidHeader
                     ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
                     : 'text-paper hover:bg-paper/10 hover:text-amber-light'
                 }`}
@@ -378,7 +386,7 @@ export default function Header() {
               <Link
                 href="/kontakt"
                 className={`px-4 py-3 rounded-sm transition-colors font-semibold ${
-                  isScrolled
+                  showSolidHeader
                     ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
                     : 'text-paper hover:bg-paper/10 hover:text-amber-light'
                 }`}
@@ -390,7 +398,7 @@ export default function Header() {
               {/* Mobile Search */}
               <button
                 className={`px-4 py-3 rounded-sm transition-colors flex items-center font-semibold ${
-                  isScrolled
+                  showSolidHeader
                     ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
                     : 'text-paper hover:bg-paper/10 hover:text-amber-light'
                 }`}
