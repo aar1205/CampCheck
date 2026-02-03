@@ -12,6 +12,10 @@ export default function CategoryCard({ category, articleCount }: CategoryCardPro
   const getCategoryColor = (): string => {
     const colors: Record<string, string> = {
       'camping-grundlagen': 'from-green-500 to-green-700',
+      'geschenke-inspiration': 'from-pink-400 to-pink-600',
+      'vanlife-camper': 'from-gray-800 to-gray-900',
+      'nachhaltigkeit': 'from-green-600 to-green-800',
+      'sicherheit-gesundheit': 'from-red-500 to-red-700',
       'ausruestung-gear': 'from-blue-500 to-blue-700',
       'zelte-schlafen': 'from-purple-500 to-purple-700',
       'camping-kueche': 'from-orange-500 to-orange-700',

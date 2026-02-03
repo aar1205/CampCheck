@@ -13,6 +13,30 @@ export const categories: Category[] = [
     icon: 'Tent'
   },
   {
+    slug: 'geschenke-inspiration',
+    name: 'Geschenke & Inspiration',
+    description: 'Die besten Geschenkideen für Camper und Outdoor-Fans',
+    icon: 'Gift'
+  },
+  {
+    slug: 'vanlife-camper',
+    name: 'Vanlife & Camper',
+    description: 'Tipps für Campervans, Vanlife und mobile Abenteuer',
+    icon: 'Car'
+  },
+  {
+    slug: 'nachhaltigkeit',
+    name: 'Nachhaltig Campen',
+    description: 'Umweltfreundliches Camping, Leave No Trace und Öko-Tipps',
+    icon: 'Leaf'
+  },
+  {
+    slug: 'sicherheit-gesundheit',
+    name: 'Sicherheit & Gesundheit',
+    description: 'Erste Hilfe, Sicherheitstipps und Gesundheit unterwegs',
+    icon: 'Shield'
+  },
+  {
     slug: 'ausruestung-gear',
     name: 'Ausrüstung & Gear',
     description: 'Die beste Ausrüstung für dein Camping-Abenteuer',
