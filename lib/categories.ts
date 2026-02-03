@@ -3,6 +3,7 @@ export interface Category {
   name: string;
   description: string;
   icon: string;
+  emoji: string;
 }
 
 export const categories: Category[] = [
@@ -10,67 +11,78 @@ export const categories: Category[] = [
     slug: 'camping-grundlagen',
     name: 'Camping-Grundlagen',
     description: 'Alles für den perfekten Einstieg ins Camping',
-    icon: 'Tent'
+    icon: 'Tent',
+    emoji: '⛺'
   },
   {
     slug: 'geschenke-inspiration',
     name: 'Geschenke & Inspiration',
     description: 'Die besten Geschenkideen für Camper und Outdoor-Fans',
-    icon: 'Gift'
+    icon: 'Gift',
+    emoji: '🎁'
   },
   {
     slug: 'vanlife-camper',
     name: 'Vanlife & Camper',
     description: 'Tipps für Campervans, Vanlife und mobile Abenteuer',
-    icon: 'Car'
+    icon: 'Car',
+    emoji: '🚐'
   },
   {
     slug: 'nachhaltigkeit',
     name: 'Nachhaltig Campen',
     description: 'Umweltfreundliches Camping, Leave No Trace und Öko-Tipps',
-    icon: 'Leaf'
+    icon: 'Leaf',
+    emoji: '🌿'
   },
   {
     slug: 'sicherheit-gesundheit',
     name: 'Sicherheit & Gesundheit',
     description: 'Erste Hilfe, Sicherheitstipps und Gesundheit unterwegs',
-    icon: 'Shield'
+    icon: 'Shield',
+    emoji: '🛡️'
   },
   {
     slug: 'ausruestung-gear',
     name: 'Ausrüstung & Gear',
     description: 'Die beste Ausrüstung für dein Camping-Abenteuer',
-    icon: 'Backpack'
+    icon: 'Backpack',
+    emoji: '🎒'
   },
   {
     slug: 'zelte-schlafen',
     name: 'Zelte & Schlafen',
     description: 'Alles rund um Zelte, Schlafsäcke und erholsamen Schlaf',
-    icon: 'Moon'
+    icon: 'Moon',
+    emoji: '🌙'
   },
   {
     slug: 'camping-kueche',
     name: 'Camping-Küche',
     description: 'Leckere Rezepte und Kochtipps für draußen',
-    icon: 'Flame'
+    icon: 'Flame',
+    emoji: '🔥'
   },
   {
     slug: 'camping-familie',
     name: 'Camping mit Familie',
     description: 'Tipps und Tricks für unvergessliche Familien-Campingurlaube',
-    icon: 'Users'
+    icon: 'Users',
+    emoji: '👨‍👩‍👧‍👦'
   },
   {
     slug: 'wildcamping',
     name: 'Wildcamping',
     description: 'Abenteuer abseits der Campingplätze - Tipps und rechtliche Infos',
-    icon: 'TreePine'
+    icon: 'TreePine',
+    emoji: '🌲'
   },
   {
     slug: 'campingplaetze',
     name: 'Campingplätze',
     description: 'Die schönsten Campingplätze in Deutschland und Europa',
-    icon: 'MapPin'
+    icon: 'MapPin',
+    emoji: '📍'
   }
 ];
 
