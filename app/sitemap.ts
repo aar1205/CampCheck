@@ -5,7 +5,7 @@ import { getAllCategories } from '@/lib/categories';
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://camping-blog.de';
+  const baseUrl = 'https://camp-check.com';
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [

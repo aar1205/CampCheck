@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://camping-blog.de/sitemap.xml',
+    sitemap: 'https://camp-check.com/sitemap.xml',
   };
 }
