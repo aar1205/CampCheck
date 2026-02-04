@@ -8,22 +8,22 @@ interface CategoryCardProps {
 }
 
 export default function CategoryCard({ category, articleCount }: CategoryCardProps) {
-  // Get category color based on slug
+  // Get category color based on slug - Naturfarben
   const getCategoryColor = (): string => {
     const colors: Record<string, string> = {
-      'camping-grundlagen': 'from-green-500 to-green-700',
-      'geschenke-inspiration': 'from-pink-400 to-pink-600',
-      'vanlife-camper': 'from-gray-800 to-gray-900',
-      'nachhaltigkeit': 'from-green-600 to-green-800',
-      'sicherheit-gesundheit': 'from-red-500 to-red-700',
-      'ausruestung-gear': 'from-blue-500 to-blue-700',
-      'zelte-schlafen': 'from-purple-500 to-purple-700',
-      'camping-kueche': 'from-orange-500 to-orange-700',
-      'camping-familie': 'from-pink-500 to-pink-700',
-      'wildcamping': 'from-emerald-600 to-emerald-800',
-      'campingplaetze': 'from-teal-500 to-teal-700'
+      'camping-grundlagen': 'from-green-600 to-green-800',      // Waldgrün
+      'geschenke-inspiration': 'from-amber-600 to-amber-800',   // Warmes Gold/Honig
+      'vanlife-camper': 'from-stone-700 to-stone-900',          // Schiefer/Stein
+      'nachhaltigkeit': 'from-emerald-700 to-emerald-900',      // Tiefes Waldgrün
+      'sicherheit-gesundheit': 'from-orange-700 to-orange-900', // Lagerfeuer-Orange
+      'ausruestung-gear': 'from-slate-600 to-slate-800',        // Berggrau/Schiefer
+      'zelte-schlafen': 'from-indigo-900 to-slate-900',         // Nachthimmel
+      'camping-kueche': 'from-amber-700 to-orange-800',         // Feuer/Sonnenuntergang
+      'camping-familie': 'from-yellow-700 to-yellow-900',       // Sonnengelb/Warm
+      'wildcamping': 'from-green-800 to-emerald-900',           // Urwaldgrün
+      'campingplaetze': 'from-yellow-600 to-amber-700'          // Sand/Strand
     };
-    return colors[category.slug] || 'from-gray-500 to-gray-700';
+    return colors[category.slug] || 'from-stone-600 to-stone-800';
   };
 
   return (

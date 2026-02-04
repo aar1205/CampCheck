@@ -76,17 +76,17 @@ export default function CategoryCarousel({ categories, posts }: CategoryCarousel
 
   const getCategoryGradient = (index: number) => {
     const gradients = [
-      'from-green-500 to-green-700',
-      'from-pink-400 to-pink-600',
-      'from-gray-800 to-gray-900',
-      'from-green-600 to-green-800',
-      'from-red-500 to-red-700',
-      'from-blue-500 to-blue-700',
-      'from-purple-500 to-purple-700',
-      'from-orange-500 to-orange-700',
-      'from-pink-400 to-pink-600',
-      'from-emerald-600 to-emerald-800',
-      'from-teal-500 to-teal-700',
+      'from-green-600 to-green-800',      // 0: Camping-Grundlagen - Waldgrün
+      'from-amber-600 to-amber-800',      // 1: Geschenke - Honiggold
+      'from-stone-700 to-stone-900',      // 2: Vanlife - Schiefer
+      'from-emerald-700 to-emerald-900',  // 3: Nachhaltigkeit - Tiefgrün
+      'from-orange-700 to-orange-900',    // 4: Sicherheit - Lagerfeuer
+      'from-slate-600 to-slate-800',      // 5: Ausrüstung - Berggrau
+      'from-indigo-900 to-slate-900',     // 6: Zelte - Nachthimmel
+      'from-amber-700 to-orange-800',     // 7: Küche - Feuer
+      'from-yellow-700 to-yellow-900',    // 8: Familie - Sonnenwarm
+      'from-green-800 to-emerald-900',    // 9: Wildcamping - Urwald
+      'from-yellow-600 to-amber-700',     // 10: Campingplätze - Sand
     ];
     return gradients[index % gradients.length];
   };
