@@ -4,7 +4,7 @@ import { getAllCategories } from '@/lib/categories';
 
 export const dynamic = "force-static";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://camp-check.com';
 
   // Static pages
@@ -60,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Dynamic blog posts
-  const posts = getAllPosts();
+  const posts = await getAllPosts();
   const postPages: MetadataRoute.Sitemap = posts.map(post => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.updatedAt || post.publishedAt),

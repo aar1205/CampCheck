@@ -29,57 +29,67 @@ function calculateReadingTime(content: string): number {
   return Math.ceil(wordCount / wordsPerMinute);
 }
 
-export function getAllPosts(): Post[] {
-  if (!fs.existsSync(postsDirectory)) {
+export async function getAllPosts(): Promise<Post[]> {
+  // Check if we're in build/SSG context
+  if (typeof window !== 'undefined') {
     return [];
   }
 
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPosts = fileNames
-    .filter(fileName => fileName.endsWith('.md'))
-    .map(fileName => {
-      const slug = fileName.replace(/\.md$/, '');
-      const fullPath = path.join(postsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
-      const { data, content } = matter(fileContents);
+  try {
+    if (!fs.existsSync(postsDirectory)) {
+      return [];
+    }
 
-      return {
-        slug,
-        title: data.title || 'Untitled',
-        excerpt: data.excerpt || '',
-        content,
-        category: data.category || 'uncategorized',
-        author: data.author || { name: 'Camping Blog Team' },
-        publishedAt: data.date || new Date().toISOString(),
-        updatedAt: data.updatedAt,
-        image: data.image || '/images/placeholder.jpg',
-        readingTime: calculateReadingTime(content),
-        featured: data.featured || false,
-        tags: data.tags || [],
-      } as Post;
-    })
-    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+    const fileNames = fs.readdirSync(postsDirectory);
+    const allPosts = fileNames
+      .filter(fileName => fileName.endsWith('.md'))
+      .map(fileName => {
+        const slug = fileName.replace(/\.md$/, '');
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const { data, content } = matter(fileContents);
 
-  return allPosts;
+        return {
+          slug,
+          title: data.title || 'Untitled',
+          excerpt: data.excerpt || '',
+          content,
+          category: data.category || 'uncategorized',
+          author: data.author || { name: 'Camping Blog Team' },
+          publishedAt: data.date || new Date().toISOString(),
+          updatedAt: data.updatedAt,
+          image: data.image || '/images/placeholder.jpg',
+          readingTime: calculateReadingTime(content),
+          featured: data.featured || false,
+          tags: data.tags || [],
+        } as Post;
+      })
+      .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+
+    return allPosts;
+  } catch (error) {
+    console.error('Error reading posts:', error);
+    return [];
+  }
 }
 
-export function getPostBySlug(slug: string): Post | undefined {
-  const allPosts = getAllPosts();
+export async function getPostBySlug(slug: string): Promise<Post | undefined> {
+  const allPosts = await getAllPosts();
   return allPosts.find(post => post.slug === slug);
 }
 
-export function getPostsByCategory(categorySlug: string): Post[] {
-  const allPosts = getAllPosts();
+export async function getPostsByCategory(categorySlug: string): Promise<Post[]> {
+  const allPosts = await getAllPosts();
   return allPosts.filter(post => post.category === categorySlug);
 }
 
-export function getFeaturedPosts(): Post[] {
-  const allPosts = getAllPosts();
+export async function getFeaturedPosts(): Promise<Post[]> {
+  const allPosts = await getAllPosts();
   return allPosts.filter(post => post.featured === true);
 }
 
-export function getRelatedPosts(currentSlug: string, limit: number = 3): Post[] {
-  const allPosts = getAllPosts();
+export async function getRelatedPosts(currentSlug: string, limit: number = 3): Promise<Post[]> {
+  const allPosts = await getAllPosts();
   const currentPost = allPosts.find(post => post.slug === currentSlug);
   if (!currentPost) return [];
 
@@ -109,8 +119,8 @@ export function getRelatedPosts(currentSlug: string, limit: number = 3): Post[] 
   return related;
 }
 
-export function getAllCategories(): { slug: string; name: string; count: number }[] {
-  const allPosts = getAllPosts();
+export async function getAllCategories(): Promise<{ slug: string; name: string; count: number }[]> {
+  const allPosts = await getAllPosts();
   const categoryMap = new Map<string, { name: string; count: number }>();
 
   allPosts.forEach(post => {

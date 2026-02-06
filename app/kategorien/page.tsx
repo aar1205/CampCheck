@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   description: 'Entdecke unsere Camping-Kategorien: Von Camping-Grundlagen über Ausrüstung und Zelte bis zu Camping-Küche, Familie, Wildcamping und den schönsten Campingplätzen.',
 };
 
-export default function KategorienPage() {
+export default async function KategorienPage() {
   const categories = getAllCategories();
-  const allPosts = getAllPosts();
+  const allPosts = await getAllPosts();
 
   // Calculate article count for each category
   const categoriesWithCount = categories.map((category) => ({

@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   description: 'Alle Camping-Artikel, Tipps und Guides für dein nächstes Outdoor-Abenteuer. Von Anfänger-Guides über Ausrüstungs-Empfehlungen bis zu den schönsten Campingplätzen.',
 };
 
-export default function BlogPage() {
-  const allPosts = getAllPosts();
+export default async function BlogPage() {
+  const allPosts = await getAllPosts();
   const categories = getAllCategories();
 
   // Sort posts by published date (newest first)

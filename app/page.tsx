@@ -6,9 +6,9 @@ import { getAllPosts, getFeaturedPosts } from '@/lib/posts';
 import { getAllCategories } from '@/lib/categories';
 import Link from 'next/link';
 
-export default function Home() {
-  const allPosts = getAllPosts();
-  const featuredPosts = getFeaturedPosts();
+export default async function Home() {
+  const allPosts = await getAllPosts();
+  const featuredPosts = await getFeaturedPosts();
   const categories = getAllCategories();
 
   // Get latest 6 posts for the "Neueste Artikel" section

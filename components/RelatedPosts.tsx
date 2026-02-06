@@ -7,13 +7,13 @@ interface RelatedPostsProps {
   limit?: number;       // default 3
 }
 
-export default function RelatedPosts({
+export default async function RelatedPosts({
   currentSlug,
   category,
   limit = 3
 }: RelatedPostsProps) {
   // Get related posts based on current slug
-  const relatedPosts = getRelatedPosts(currentSlug, limit);
+  const relatedPosts = await getRelatedPosts(currentSlug, limit);
 
   // Don't render if no related posts found
   if (relatedPosts.length === 0) {

@@ -42,7 +42,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     notFound();
   }
 
-  const posts = getPostsByCategory(slug);
+  const posts = await getPostsByCategory(slug);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white pt-24">
