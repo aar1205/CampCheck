@@ -10,9 +10,9 @@ import TableOfContents from '@/components/TableOfContents';
 import RelatedPosts from '@/components/RelatedPosts';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Generate static params for all blog posts
@@ -25,7 +25,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const post = getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     return {
@@ -170,8 +171,9 @@ function parseContent(content: string) {
   return finalLines.join('\n');
 }
 
-export default function BlogArticlePage({ params }: PageProps) {
-  const post = getPostBySlug(params.slug);
+export default async function BlogArticlePage({ params }: PageProps) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   // If post not found, show 404
   if (!post) {

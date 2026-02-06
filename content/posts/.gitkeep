@@ -1,0 +1,30 @@
+# Blog Posts Ordner
+
+Hier kommen alle Markdown-Dateien für Blogposts rein.
+
+## Datei-Struktur:
+
+```markdown
+---
+title: "Titel des Posts"
+excerpt: "Kurze Beschreibung..."
+category: "camping-grundlagen"
+date: "2026-02-06"
+image: "https://images.unsplash.com/..."
+featured: false
+tags: ["Tag1", "Tag2"]
+author:
+  name: "Dein Name"
+---
+
+Hier kommt der Inhalt in Markdown...
+```
+
+## Verfügbare Kategorien:
+- allgemein
+- camping-grundlagen
+- ausruestung-gear
+- zelte-schlafen
+- campingplaetze
+- camping-kueche
+- wildcamping
