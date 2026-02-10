@@ -43,13 +43,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const category = getCategoryBySlug(post.category);
 
+  // Use metaTitle if available, otherwise fallback to title
+  const pageTitle = post.metaTitle || post.title;
+  // Use metaDescription if available, otherwise fallback to excerpt
+  const pageDescription = post.metaDescription || post.excerpt;
+
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: pageTitle,
+    description: pageDescription,
     authors: [{ name: post.author.name }],
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: pageTitle,
+      description: pageDescription,
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
@@ -65,8 +70,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
-      description: post.excerpt,
+      title: pageTitle,
+      description: pageDescription,
       images: [post.image],
     },
     keywords: post.tags,
@@ -96,73 +101,145 @@ function parseHeadings(content: string) {
 
 // Helper function to convert markdown-style content to HTML
 function parseContent(content: string) {
+  // Process content in blocks to handle code blocks properly
+  const blocks: string[] = [];
   const lines = content.split('\n');
-  const parsedLines = lines.map((line) => {
+  let i = 0;
+  
+  while (i < lines.length) {
+    const line = lines[i];
+    
+    // Handle code blocks (```language ... ```)
+    if (line.trim().startsWith('```')) {
+      const lang = line.trim().slice(3).trim();
+      const codeContent: string[] = [];
+      i++;
+      while (i < lines.length && !lines[i].trim().startsWith('```')) {
+        codeContent.push(lines[i]);
+        i++;
+      }
+      const code = escapeHtml(codeContent.join('\n'));
+      blocks.push(`<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6 text-sm"><code class="language-${lang}">${code}</code></pre>`);
+      i++;
+      continue;
+    }
+    
+    // Handle horizontal rules
+    if (line.trim() === '---') {
+      blocks.push('<hr class="border-gray-200 my-8" />');
+      i++;
+      continue;
+    }
+    
+    // Handle h2 headings
     if (line.startsWith('## ')) {
       const text = line.substring(3).trim();
-      const id = text
-        .toLowerCase()
-        .replace(/[^a-z0-9äöüß\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .replace(/-+/g, '-')
-        .replace(/^-|-$/g, '');
-      return `<h2 id="${id}" class="text-3xl font-bold mt-10 mb-4 text-gray-900 scroll-mt-20">${text}</h2>`;
+      const id = createId(text);
+      blocks.push(`<h2 id="${id}" class="text-3xl font-bold mt-10 mb-4 text-gray-900 scroll-mt-20">${parseInline(text)}</h2>`);
+      i++;
+      continue;
     }
-
+    
+    // Handle h3 headings
     if (line.startsWith('### ')) {
       const text = line.substring(4).trim();
-      const id = text
-        .toLowerCase()
-        .replace(/[^a-z0-9äöüß\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .replace(/-+/g, '-')
-        .replace(/^-|-$/g, '');
-      return `<h3 id="${id}" class="text-2xl font-bold mt-8 mb-3 text-gray-800 scroll-mt-20">${text}</h3>`;
+      const id = createId(text);
+      blocks.push(`<h3 id="${id}" class="text-2xl font-bold mt-8 mb-3 text-gray-800 scroll-mt-20">${parseInline(text)}</h3>`);
+      i++;
+      continue;
     }
-
-    const boldConverted = line.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-
-    if (boldConverted.startsWith('- ')) {
-      return `<li class="mb-2">${boldConverted.substring(2)}</li>`;
+    
+    // Handle h4 headings
+    if (line.startsWith('#### ')) {
+      const text = line.substring(5).trim();
+      blocks.push(`<h4 class="text-xl font-bold mt-6 mb-2 text-gray-800">${parseInline(text)}</h4>`);
+      i++;
+      continue;
     }
-
-    if (boldConverted.startsWith('- ☐ ')) {
-      return `<li class="mb-2 flex items-start gap-2"><span class="text-gray-400">☐</span><span>${boldConverted.substring(4)}</span></li>`;
-    }
-
-    if (boldConverted.trim() && !boldConverted.startsWith('<')) {
-      return `<p class="mb-4 text-gray-700 leading-relaxed">${boldConverted}</p>`;
-    }
-
-    return boldConverted;
-  });
-
-  let inList = false;
-  const finalLines: string[] = [];
-
-  for (let i = 0; i < parsedLines.length; i++) {
-    const line = parsedLines[i];
-
-    if (line.startsWith('<li')) {
-      if (!inList) {
-        finalLines.push('<ul class="list-none space-y-2 mb-6 pl-6">');
-        inList = true;
+    
+    // Handle list items (collect consecutive items)
+    if (line.startsWith('- ')) {
+      const listItems: string[] = [];
+      while (i < lines.length && lines[i].startsWith('- ')) {
+        const itemLine = lines[i];
+        const itemText = itemLine.substring(2).trim();
+        listItems.push(`<li class="mb-2">${parseInline(itemText)}</li>`);
+        i++;
       }
-      finalLines.push(line);
-    } else {
-      if (inList) {
-        finalLines.push('</ul>');
-        inList = false;
-      }
-      finalLines.push(line);
+      blocks.push(`<ul class="list-none space-y-2 mb-6 pl-6">${listItems.join('')}</ul>`);
+      continue;
     }
+    
+    // Handle numbered lists
+    if (/^\d+\.\s/.test(line)) {
+      const listItems: string[] = [];
+      while (i < lines.length && /^\d+\.\s/.test(lines[i])) {
+        const text = lines[i].replace(/^\d+\.\s/, '');
+        listItems.push(`<li class="mb-2">${parseInline(text)}</li>`);
+        i++;
+      }
+      blocks.push(`<ol class="list-decimal space-y-2 mb-6 pl-6 marker:text-gray-500">${listItems.join('')}</ol>`);
+      continue;
+    }
+    
+    // Handle blockquotes
+    if (line.startsWith('> ')) {
+      const quoteLines: string[] = [];
+      while (i < lines.length && lines[i].startsWith('> ')) {
+        quoteLines.push(lines[i].substring(2));
+        i++;
+      }
+      const quote = quoteLines.join('\n');
+      blocks.push(`<blockquote class="border-l-4 border-green-500 pl-4 italic text-gray-600 my-6">${parseInline(quote)}</blockquote>`);
+      continue;
+    }
+    
+    // Handle empty lines
+    if (line.trim() === '') {
+      i++;
+      continue;
+    }
+    
+    // Regular paragraph
+    blocks.push(`<p class="mb-4 text-gray-700 leading-relaxed">${parseInline(line)}</p>`);
+    i++;
   }
+  
+  return blocks.join('\n');
+}
 
-  if (inList) {
-    finalLines.push('</ul>');
-  }
+// Helper to create URL-friendly IDs
+function createId(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9äöüß\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+}
 
-  return finalLines.join('\n');
+// Helper to parse inline formatting (bold, italic, links)
+function parseInline(text: string): string {
+  // Handle links [text](url)
+  let result = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-green-600 hover:text-green-700 underline">$1</a>');
+  
+  // Handle bold **text**
+  result = result.replace(/\*\*(.+?)\*\*/g, '<strong class="text-gray-900 font-bold">$1</strong>');
+  
+  // Handle inline code `text`
+  result = result.replace(/`([^`]+)`/g, '<code class="bg-gray-100 text-gray-800 px-1 py-0.5 rounded text-sm font-mono">$1</code>');
+  
+  return result;
+}
+
+// Escape HTML special characters for code blocks
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
 }
 
 export default async function BlogArticlePage({ params }: { params: Promise<{ slug: string }> }) {

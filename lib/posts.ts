@@ -5,7 +5,9 @@ import matter from 'gray-matter';
 export interface Post {
   slug: string;
   title: string;
+  metaTitle?: string;
   excerpt: string;
+  metaDescription?: string;
   content: string;
   category: string;
   author: {
@@ -52,7 +54,9 @@ export async function getAllPosts(): Promise<Post[]> {
         return {
           slug,
           title: data.title || 'Untitled',
+          metaTitle: data.metaTitle,
           excerpt: data.excerpt || '',
+          metaDescription: data.metaDescription,
           content,
           category: data.category || 'uncategorized',
           author: data.author || { name: 'Camping Blog Team' },
