@@ -26,6 +26,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://camp-check.com"),
   title: {
     default: "CampCheck - Dein Guide für Camping & Outdoor",
     template: "%s | CampCheck",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "de_DE",
-    url: "https://campcheck.de",
+    url: "https://camp-check.com",
     siteName: "CampCheck",
     title: "CampCheck - Dein Guide für Camping & Outdoor",
     description:
