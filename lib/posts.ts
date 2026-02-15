@@ -26,7 +26,7 @@ export interface Post {
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
 function calculateReadingTime(content: string): number {
-  const wordsPerMinute = 200;
+  const wordsPerMinute = 250;
   const wordCount = content.split(/\s+/).length;
   return Math.ceil(wordCount / wordsPerMinute);
 }
@@ -63,7 +63,7 @@ export async function getAllPosts(): Promise<Post[]> {
           publishedAt: data.date || new Date().toISOString(),
           updatedAt: data.updatedAt,
           image: data.image || '/images/placeholder.jpg',
-          readingTime: calculateReadingTime(content),
+          readingTime: data.readingTime || calculateReadingTime(content),
           featured: data.featured || false,
           tags: data.tags || [],
         } as Post;

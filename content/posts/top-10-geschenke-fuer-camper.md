@@ -11,7 +11,7 @@ featured: true
 tags: ["Geschenke", "Ausrüstung", "Camping-Zubehör", "Geschenkideen", "Outdoor", "Geschenk-Guide", "Camping 2026"]
 author:
   name: "Camping Stories Team"
-readingTime: 12
+readingTime: 11
 ---
 
 Du stehst vor dem gleichen Problem wie ich jedes Jahr vor Weihnachten oder Geburtstagen: Was schenkt man jemandem, der am liebsten draußen unterwegs ist? Noch ein Sockenpaar? Ein Buch, das im Regal verstaubt?
