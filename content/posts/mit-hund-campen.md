@@ -10,7 +10,7 @@ featured: true
 tags: ["Hund", "Camping mit Hund", "Hundeausrüstung", "Outdoor mit Hund", "Camping-Tipps", "Familie", "Checkliste"]
 author:
   name: "Camping Stories Team"
-readingTime: 9
+readingTime: 12
 ---
 
 Du stehst morgens vor dem Zelt, der Nebel steigt vom See auf, dein Kaffee ist gerade fertig – und dein Hund liegt neben dir und gähnt zufrieden. Klingt perfekt, oder?

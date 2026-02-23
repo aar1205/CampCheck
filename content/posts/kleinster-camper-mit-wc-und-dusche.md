@@ -11,7 +11,7 @@ featured: true
 tags: ["Camper", "WC", "Dusche", "Kompakt", "Vanlife", "Kastenwagen"]
 author:
   name: "Camping Stories Team"
-readingTime: 12
+readingTime: 8
 ---
 
 # Kleinster Camper mit WC und Dusche: Die kompaktesten Modelle 2026

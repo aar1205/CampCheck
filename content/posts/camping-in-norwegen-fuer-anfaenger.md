@@ -11,7 +11,7 @@ featured: true
 tags: ["Norwegen", "Camping-Anfänger", "Wildcampen", "Jedermannsrecht", "Campingplätze", "Wohnmobil", "Reisezeit"]
 author:
   name: "Camping Stories Team"
-readingTime: 18
+readingTime: 17
 ---
 
 ## Einleitung: Dein erstes norwegisches Abenteuer wartet

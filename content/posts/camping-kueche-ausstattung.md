@@ -11,7 +11,7 @@ featured: true
 tags: ["Camping-Küche", "Ausrüstung", "Checkliste", "Must-Haves", "Camping-Geschirr"]
 author:
   name: "Camping Stories Team"
-readingTime: 12
+readingTime: 10
 ---
 
 ## Einleitung
