@@ -26,6 +26,10 @@ export default function ArticleCard({ post, variant = 'default' }: ArticleCardPr
   const getCategoryColor = (): string => {
     const colors: Record<string, string> = {
       'camping-grundlagen': 'bg-moss',
+      'geschenke-inspiration': 'bg-amber',
+      'vanlife-camper': 'bg-forest',
+      'nachhaltigkeit': 'bg-green-600',
+      'sicherheit-gesundheit': 'bg-red-500',
       'ausruestung-gear': 'bg-forest',
       'zelte-schlafen': 'bg-amber-dark',
       'camping-kueche': 'bg-forest-light',
@@ -98,7 +102,7 @@ export default function ArticleCard({ post, variant = 'default' }: ArticleCardPr
           {/* Category Badge - positioned on image */}
           {category && variant !== 'compact' && (
             <Link
-              href={`/categories/${post.category}`}
+              href={`/kategorien/${post.category}`}
               className={`
                 absolute top-4 left-4 px-4 py-2 rounded-sm text-white text-sm font-bold  uppercase tracking-wide
                 ${getCategoryColor()} hover:opacity-90 transition-opacity shadow-lg
@@ -114,7 +118,7 @@ export default function ArticleCard({ post, variant = 'default' }: ArticleCardPr
           {/* Category Badge for compact variant */}
           {category && variant === 'compact' && (
             <Link
-              href={`/categories/${post.category}`}
+              href={`/kategorien/${post.category}`}
               className={`
                 inline-block w-fit px-3 py-1 rounded-sm text-white text-xs font-bold  uppercase tracking-wide mb-2
                 ${getCategoryColor()} hover:opacity-90 transition-opacity
