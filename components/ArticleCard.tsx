@@ -23,21 +23,22 @@ export default function ArticleCard({ post, variant = 'default' }: ArticleCardPr
   };
 
   // Get category color based on slug
-  const getCategoryColor = (): string => {
-    const colors: Record<string, string> = {
-      'camping-grundlagen': 'bg-moss',
-      'geschenke-inspiration': 'bg-amber',
-      'vanlife-camper': 'bg-forest',
-      'nachhaltigkeit': 'bg-green-600',
-      'sicherheit-gesundheit': 'bg-red-500',
-      'ausruestung-gear': 'bg-forest',
-      'zelte-schlafen': 'bg-amber-dark',
-      'camping-kueche': 'bg-forest-light',
-      'camping-familie': 'bg-sage',
-      'wildcamping': 'bg-forest-deep',
-      'campingplaetze': 'bg-moss'
-    };
-    return colors[post.category] || 'bg-stone';
+  // Tailwind safelist: bg-moss bg-amber bg-forest bg-green-600 bg-red-500 bg-amber-dark bg-forest-light bg-sage bg-forest-deep bg-stone
+  const getCategoryColor = (slug: string): string => {
+    switch (slug) {
+      case 'camping-grundlagen': return 'bg-moss';
+      case 'geschenke-inspiration': return 'bg-amber';
+      case 'vanlife-camper': return 'bg-forest';
+      case 'nachhaltigkeit': return 'bg-green-600';
+      case 'sicherheit-gesundheit': return 'bg-red-500';
+      case 'ausruestung-gear': return 'bg-forest';
+      case 'zelte-schlafen': return 'bg-amber-dark';
+      case 'camping-kueche': return 'bg-forest-light';
+      case 'camping-familie': return 'bg-sage';
+      case 'wildcamping': return 'bg-forest-deep';
+      case 'campingplaetze': return 'bg-moss';
+      default: return 'bg-stone';
+    }
   };
 
   // Variant-specific classes
@@ -105,7 +106,7 @@ export default function ArticleCard({ post, variant = 'default' }: ArticleCardPr
               href={`/kategorien/${post.category}`}
               className={`
                 absolute top-4 left-4 px-4 py-2 rounded-sm text-white text-sm font-bold  uppercase tracking-wide
-                ${getCategoryColor()} hover:opacity-90 transition-opacity shadow-lg
+                ${getCategoryColor(post.category)} hover:opacity-90 transition-opacity shadow-lg
               `}
             >
               <CategoryIcon name={category.icon} size={16} className="inline-block mr-1" /> {category.name}
@@ -121,7 +122,7 @@ export default function ArticleCard({ post, variant = 'default' }: ArticleCardPr
               href={`/kategorien/${post.category}`}
               className={`
                 inline-block w-fit px-3 py-1 rounded-sm text-white text-xs font-bold  uppercase tracking-wide mb-2
-                ${getCategoryColor()} hover:opacity-90 transition-opacity
+                ${getCategoryColor(post.category)} hover:opacity-90 transition-opacity
               `}
             >
               <CategoryIcon name={category.icon} size={16} className="inline-block mr-1" /> {category.name}
