@@ -5,7 +5,7 @@ excerpt: "Entdecke die besten Camper Ausbau Ideen für deinen Selbstausbau! Von 
 metaDescription: "Entdecke kreative Camper Ausbau Ideen für deinen Selbstausbau! ✓ Kostenübersicht ✓ Anfänger-Tipps ✓ Nachhaltige Materialien ✓ Gratis Checkliste zum Download!"
 date: "2026-02-24"
 updatedAt: "2026-02-24"
-category: "camper-ausbau"
+category: "vanlife-camper"
 image: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=1200&q=80"
 featured: true
 tags: ["Camper Ausbau", "Vanlife", "Selbstausbau", "DIY Camper", "Nachhaltigkeit", "Van Ausbau"]
@@ -502,7 +502,7 @@ Der Selbstausbau eines Campers ist ein Abenteuer, das dich fordert und belohnt g
 
 Ob minimalistischer Budget-Bus oder luxuriöses Reisemobil – die Möglichkeiten sind endlos. Die wichtigste Erkenntnis: Fang einfach an. Perfektion kommt mit der Zeit, und jeder Tag in deinem selbstgebauten Camper ist ein Sieg.
 
-Hast du noch Fragen oder suchst Inspiration für dein Projekt? Dann stöber in unserer [Kategorie Camper Ausbau](/kategorien/camper-ausbau) – dort findest du noch mehr Guides, Tipps und Erfahrungsberichte aus der Community.
+Hast du noch Fragen oder suchst Inspiration für dein Projekt? Dann stöber in unserer [Kategorie Camper Ausbau](/kategorien/vanlife-camper) – dort findest du noch mehr Guides, Tipps und Erfahrungsberichte aus der Community.
 
 Auf geht's – dein Vanlife-Abenteuer wartet!
 
