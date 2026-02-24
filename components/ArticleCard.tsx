@@ -22,22 +22,21 @@ export default function ArticleCard({ post, variant = 'default' }: ArticleCardPr
     });
   };
 
-  // Get category color based on slug
-  // Tailwind safelist: bg-moss bg-amber bg-forest bg-green-600 bg-red-500 bg-amber-dark bg-forest-light bg-sage bg-forest-deep bg-stone
+  // Get category color based on slug - synchronized with CategoryCard.tsx
   const getCategoryColor = (slug: string): string => {
     switch (slug) {
-      case 'camping-grundlagen': return 'bg-moss';
-      case 'geschenke-inspiration': return 'bg-amber';
-      case 'vanlife-camper': return 'bg-forest';
-      case 'nachhaltigkeit': return 'bg-green-600';
-      case 'sicherheit-gesundheit': return 'bg-red-500';
-      case 'ausruestung-gear': return 'bg-forest';
-      case 'zelte-schlafen': return 'bg-amber-dark';
-      case 'camping-kueche': return 'bg-forest-light';
-      case 'camping-familie': return 'bg-sage';
-      case 'wildcamping': return 'bg-forest-deep';
-      case 'campingplaetze': return 'bg-moss';
-      default: return 'bg-stone';
+      case 'camping-grundlagen': return 'bg-green-700';
+      case 'geschenke-inspiration': return 'bg-amber-600';
+      case 'vanlife-camper': return 'bg-stone-700';
+      case 'nachhaltigkeit': return 'bg-emerald-700';
+      case 'sicherheit-gesundheit': return 'bg-orange-700';
+      case 'ausruestung-gear': return 'bg-slate-600';
+      case 'zelte-schlafen': return 'bg-indigo-900';
+      case 'camping-kueche': return 'bg-amber-700';
+      case 'camping-familie': return 'bg-yellow-700';
+      case 'wildcamping': return 'bg-green-800';
+      case 'campingplaetze': return 'bg-yellow-600';
+      default: return 'bg-stone-600';
     }
   };
 
