@@ -83,6 +83,20 @@ export const categories: Category[] = [
     description: 'Die schönsten Campingplätze in Deutschland und Europa',
     icon: 'MapPin',
     emoji: '📍'
+  },
+  {
+    slug: 'camping-mit-hund',
+    name: 'Camping mit Hund',
+    description: 'Tipps für Camping mit deinem vierbeinigen Begleiter – von der Planung bis zum Hundestrand',
+    icon: 'Dog',
+    emoji: '🐕'
+  },
+  {
+    slug: 'camper-ausbau',
+    name: 'Camper Ausbau',
+    description: 'DIY-Tipps, Ausbau-Ideen und Anleitungen für deinen Selbstausbau',
+    icon: 'Wrench',
+    emoji: '🔧'
   }
 ];
 
