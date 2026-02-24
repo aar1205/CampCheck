@@ -5,7 +5,7 @@ excerpt: "Der ultimative Guide für hundefreundliches Camping in Holland direkt 
 metaDescription: "Entdecke die besten hundefreundlichen Campingplätze in Holland direkt am Meer! ✓ Strand-Infos ✓ Packliste ✓ Einreisebestimmungen → Jetzt Urlaub planen!"
 date: "2026-02-24"
 updatedAt: "2026-02-24"
-category: "camping-mit-hund"
+category: "camping-familie"
 image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=1200&auto=format&fit=crop&q=80"
 featured: true
 tags: ["Camping mit Hund", "Holland", "Nordsee", "Zeeland", "Hundestrand", "Niederlande"]
@@ -632,7 +632,7 @@ Ein Campingurlaub mit Hund in Holland am Meer ist eine wunderbare Erfahrung. Die
 
 Die 12 vorgestellten Campingplätze bieten für jeden Geschmack das Richtige – ob du lieber im pulsierenden Roompot Beach Resort urlaubst oder die Ruhe des kleinen Strandcamping Groede suchst. Die gute Infrastruktur mit Tierarztpraxen, gut ausgeschilderten Hundestränden und hundefreundlichen Restaurants sorgt für entspannte Tage.
 
-Mehr zum Thema findest du in unserer Kategorie [Camping mit Hund](/kategorien/camping-mit-hund), wo wir weitere Guides zu verschiedenen Regionen und Ländern veröffentlichen.
+Mehr zum Thema findest du in unserer Kategorie [Camping mit Hund](/kategorien/camping-familie), wo wir weitere Guides zu verschiedenen Regionen und Ländern veröffentlichen.
 
 **Dein nächster Schritt:** Pack die Leine ein, buche einen der empfohlenen Campingplätze und freu dich auf unvergessliche Strandtage mit deinem besten Freund. Die Nordsee wartet schon!
 
