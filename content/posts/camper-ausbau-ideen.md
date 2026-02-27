@@ -5,7 +5,7 @@ excerpt: "Entdecke die besten Camper Ausbau Ideen für deinen Selbstausbau! Von 
 metaDescription: "Entdecke kreative Camper Ausbau Ideen für deinen Selbstausbau! ✓ Kostenübersicht ✓ Anfänger-Tipps ✓ Nachhaltige Materialien ✓ Gratis Checkliste zum Download!"
 date: "2026-02-24"
 updatedAt: "2026-02-24"
-category: "camper-ausbau"
+category: "vanlife-camper"
 image: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=1200&q=80"
 featured: true
 tags: ["Camper Ausbau", "Vanlife", "Selbstausbau", "DIY Camper", "Nachhaltigkeit", "Van Ausbau"]
