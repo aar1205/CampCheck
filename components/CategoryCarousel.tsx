@@ -87,6 +87,7 @@ export default function CategoryCarousel({ categories, posts }: CategoryCarousel
       'from-yellow-700 to-yellow-900',    // 8: Familie - Sonnenwarm
       'from-green-800 to-emerald-900',    // 9: Wildcamping - Urwald
       'from-yellow-600 to-amber-700',     // 10: Campingplätze - Sand
+      'from-violet-600 to-purple-800',    // 11: Sonstiges - Kreatives Violett
     ];
     return gradients[index % gradients.length];
   };

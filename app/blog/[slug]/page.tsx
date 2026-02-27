@@ -308,7 +308,24 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
 
           <header className="max-w-4xl mx-auto mt-8 mb-12">
             {category && (
-              <Link href={`/kategorien/${category.slug}`} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors mb-6">
+              <Link href={`/kategorien/${category.slug}`} className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-white font-semibold hover:opacity-90 transition-colors mb-6 ${(() => {
+                // Category colors synchronized with CategoryCard.tsx
+                const colors: Record<string, string> = {
+                  'camping-grundlagen': 'bg-green-700',
+                  'geschenke-inspiration': 'bg-amber-600',
+                  'vanlife-camper': 'bg-stone-700',
+                  'nachhaltigkeit': 'bg-emerald-700',
+                  'sicherheit-gesundheit': 'bg-orange-700',
+                  'ausruestung-gear': 'bg-slate-600',
+                  'zelte-schlafen': 'bg-indigo-900',
+                  'camping-kueche': 'bg-amber-700',
+                  'camping-familie': 'bg-yellow-700',
+                  'wildcamping': 'bg-green-800',
+                  'campingplaetze': 'bg-yellow-600',
+                  'sonstiges': 'bg-violet-600'
+                };
+                return colors[category.slug] || 'bg-stone-600';
+              })()}`}>
                 <CategoryIcon name={category.icon} size={20} />
                 <span>{category.name}</span>
               </Link>

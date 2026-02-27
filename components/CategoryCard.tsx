@@ -21,7 +21,8 @@ export default function CategoryCard({ category, articleCount }: CategoryCardPro
       'camping-kueche': 'from-amber-700 to-orange-800',         // Feuer/Sonnenuntergang
       'camping-familie': 'from-yellow-700 to-yellow-900',       // Sonnengelb/Warm
       'wildcamping': 'from-green-800 to-emerald-900',           // Urwaldgrün
-      'campingplaetze': 'from-yellow-600 to-amber-700'          // Sand/Strand
+      'campingplaetze': 'from-yellow-600 to-amber-700',         // Sand/Strand
+      'sonstiges': 'from-violet-600 to-purple-800'              // Kreatives Violett
     };
     return colors[category.slug] || 'from-stone-600 to-stone-800';
   };

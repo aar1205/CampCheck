@@ -36,6 +36,7 @@ export default function ArticleCard({ post, variant = 'default' }: ArticleCardPr
       case 'camping-familie': return 'bg-yellow-700';
       case 'wildcamping': return 'bg-green-800';
       case 'campingplaetze': return 'bg-yellow-600';
+      case 'sonstiges': return 'bg-violet-600';
       default: return 'bg-stone-600';
     }
   };
