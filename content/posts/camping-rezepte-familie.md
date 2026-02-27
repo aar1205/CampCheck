@@ -1,14 +1,17 @@
 ---
-title: "Camping Rezepte für die ganze Familie"
-description: "15 leckere und einfache Camping-Rezepte, die Kindern und Eltern schmecken. Von Frühstück bis Dessert - perfekt für den Urlaub im Wohnmobil, Zelt oder Camper."
-author: "Kimi"
-pubDate: 2026-02-27
-tags: ["Camping", "Rezepte", "Familie", "Outdoor-Küche", "Kochen", "Camping-Essen"]
-categories: ["Camping-Küche"]
-coverImage: "/images/camping-rezepte-familie.jpg"
-draft: false
+title: "Camping Rezepte Familie: 15 einfache Gerichte [2026]"
+metaTitle: "Camping Rezepte Familie (2026): 15 einfache Gerichte | CampCheck"
+excerpt: "Leckere Camping Rezepte für die ganze Familie. Einfache Gerichte für Kocher, Grill und Lagerfeuer – von Frühstück bis Dessert."
+metaDescription: "Camping Rezepte für Familien gesucht? ➤ 15 leckere & einfache Gerichte für Kocher, Grill & Feuer. Perfekt für den Camping-Urlaub!"
+date: "2026-02-27"
+updatedAt: "2026-02-27"
+category: "camping-kueche"
+image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=1200&h=630&fit=crop"
 featured: true
-readingTime: 12
+tags: ["Camping-Rezepte", "Familie", "Kochen", "Outdoor", "Camping-Küche"]
+author:
+  name: "Camping Stories Team"
+readingTime: 9
 ---
 
 # Camping Rezepte für die ganze Familie

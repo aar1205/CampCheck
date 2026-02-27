@@ -1,23 +1,19 @@
 ---
-title: "Sprüche für Camper: Die ultimative Sammlung für alle Camping-Fans"
-description: "Entdecke über 50 inspirierende, lustige und nachdenkliche Sprüche für Camper. Perfekte Zitate für dein Wohnmobil, deinen Van oder zum Teilen mit der Camping-Community."
-date: 2025-02-27T10:00:00+01:00
-lastmod: 2025-02-27T10:00:00+01:00
-author: "Camping-Enthusiast"
-authorLink: "/ueber-mich/"
-featuredImage: "/images/sprueche-fuer-camper.jpg"
-featuredImagePreview: "/images/sprueche-fuer-camper-preview.jpg"
-categories:
-  - "sonstiges"
-tags:
-  - "sprueche"
-  - "zitate"
-  - "camper-life"
-  - "vanlife"
-  - "camping-community"
-  - "inspiration"
-draft: false
-lightgallery: true
+title: "Sprüche für Camper: Die 50 besten Zitate & Weisheiten [2026]"
+metaTitle: "Sprüche für Camper (2026): 50 Zitate & lustige Weisheiten | CampCheck"
+excerpt: "Die besten Sprüche für Camper: Lustige Zitate, inspirierende Weisheiten und kurze Sprüche für jeden Camping-Fan. Perfekt für T-Shirts & Co."
+metaDescription: "Sprüche für Camper gesucht? ➤ 50 lustige Zitate, inspirierende Weisheiten & kurze Sprüche. Perfekt für T-Shirts, Becher & Co!"
+date: "2026-02-27"
+updatedAt: "2026-02-27"
+category: "sonstiges"
+image: "https://images.unsplash.com/photo-1475483768296-6163e08872a1?w=1200&h=630&fit=crop"
+featured: true
+tags: ["Camping-Sprüche", "Zitate", "Lustig", "Inspiration", "Camper-Life"]
+author:
+  name: "Camping Stories Team"
+readingTime: 8
+---
+
 ---
 
 <!--more-->
