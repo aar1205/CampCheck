@@ -83,6 +83,13 @@ export const categories: Category[] = [
     description: 'Die schönsten Campingplätze in Deutschland und Europa',
     icon: 'MapPin',
     emoji: '📍'
+  },
+  {
+    slug: 'sonstiges',
+    name: 'Sonstiges',
+    description: 'Verschiedene Camping-Themen, Tipps und Inspiration',
+    icon: 'Sparkles',
+    emoji: '✨'
   }
 ];
 
