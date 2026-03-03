@@ -12,13 +12,14 @@ interface BreadcrumbsProps {
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   // Generate JSON-LD structured data for SEO
   const generateJsonLd = () => {
+    const baseUrl = 'https://camp-check.com';
     const itemListElement = items
       .filter(item => item.href) // Only include items with href
       .map((item, index) => ({
         '@type': 'ListItem',
         position: index + 1,
         name: item.name,
-        item: `${process.env.NEXT_PUBLIC_SITE_URL || ''}${item.href}`,
+        item: `${baseUrl}${item.href}`,
       }));
 
     return {

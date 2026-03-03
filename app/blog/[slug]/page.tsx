@@ -263,6 +263,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
     });
   };
 
+  const baseUrl = 'https://camp-check.com';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -281,7 +282,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
       name: 'Camping Blog',
       logo: {
         '@type': 'ImageObject',
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || ''}/logo.png`,
+        url: `${baseUrl}/logo.png`,
       },
     },
     articleSection: category?.name,
