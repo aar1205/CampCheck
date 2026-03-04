@@ -82,14 +82,56 @@ Die meisten deutschen Familien nehmen diese Route:
 
 Die wichtigsten Fährverbindungen für Familien:
 
-| Abfahrtshafen | Zielhafen | Fahrtzeit | Besonderheit |
-|--------------|-----------|-----------|--------------|
-| Livorno | Bastia | ca. 4,5 Std. | Günstigste Verbindung |
-| Piombino | Bastia | ca. 2,5 Std. | Schnellste Verbindung |
-| Savona | Bastia | ca. 5 Std. | Gute Alternative |
-| Genua | Bastia | ca. 6 Std. | Nachtfähre möglich |
-| Marseille | Ajaccio | ca. 11 Std. | Für Westkorsika |
-| Toulon | Porto Vecchio | ca. 9 Std. | Direkt in den Süden |
+<div class="overflow-x-auto my-6">
+  <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+    <thead class="bg-green-600 text-white">
+      <tr>
+        <th class="px-4 py-3 text-left font-semibold">Abfahrtshafen</th>
+        <th class="px-4 py-3 text-left font-semibold">Zielhafen</th>
+        <th class="px-4 py-3 text-left font-semibold">Fahrtzeit</th>
+        <th class="px-4 py-3 text-left font-semibold">Besonderheit</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Livorno</td>
+        <td class="px-4 py-3 text-gray-700">Bastia</td>
+        <td class="px-4 py-3 text-gray-600">ca. 4,5 Std.</td>
+        <td class="px-4 py-3 text-gray-600">Günstigste Verbindung</td>
+      </tr>
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Piombino</td>
+        <td class="px-4 py-3 text-gray-700">Bastia</td>
+        <td class="px-4 py-3 text-gray-600">ca. 2,5 Std.</td>
+        <td class="px-4 py-3 text-gray-600">Schnellste Verbindung</td>
+      </tr>
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Savona</td>
+        <td class="px-4 py-3 text-gray-700">Bastia</td>
+        <td class="px-4 py-3 text-gray-600">ca. 5 Std.</td>
+        <td class="px-4 py-3 text-gray-600">Gute Alternative</td>
+      </tr>
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Genua</td>
+        <td class="px-4 py-3 text-gray-700">Bastia</td>
+        <td class="px-4 py-3 text-gray-600">ca. 6 Std.</td>
+        <td class="px-4 py-3 text-gray-600">Nachtfähre möglich</td>
+      </tr>
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Marseille</td>
+        <td class="px-4 py-3 text-gray-700">Ajaccio</td>
+        <td class="px-4 py-3 text-gray-600">ca. 11 Std.</td>
+        <td class="px-4 py-3 text-gray-600">Für Westkorsika</td>
+      </tr>
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Toulon</td>
+        <td class="px-4 py-3 text-gray-700">Porto Vecchio</td>
+        <td class="px-4 py-3 text-gray-600">ca. 9 Std.</td>
+        <td class="px-4 py-3 text-gray-600">Direkt in den Süden</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 **Unsere Empfehlung**: Für Familien mit kleinen Kindern ist die Strecke Livorno–Bastia ideal. Die Überfahrt ist kurz genug, um nicht zu langweilig zu werden, aber lang genug, um das Meer zu genießen.
 

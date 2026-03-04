@@ -41,14 +41,42 @@ In den Niederlanden vergeben der **ANWB** (Algemene Nederlandse Wielrijdersbond)
 
 ### Bewertungskategorien für 5 Sterne:
 
-| Kategorie | Anforderungen bei 5 Sternen |
-|-----------|----------------------------|
-| **Sanitäranlagen** | Mindestens 1 WC und 1 Dusche pro 25 Plätze, luxuriöse Ausstattung |
-| **Stellplatzgröße** | Mindestens 80 m², idealerweise 100+ m² |
-| **Stromversorgung** | Mindestens 10 Ampere an 50% der Plätze |
-| **Einrichtungen** | Schwimmbad, Restaurant, Laden, Animation |
-| **Service** | Mehrsprachiges Personal, Gästebetreuung |
-| **Lage & Umgebung** | Attraktive, ruhige Lage mit Erholungswert |
+<div class="overflow-x-auto my-6">
+  <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+    <thead class="bg-green-600 text-white">
+      <tr>
+        <th class="px-4 py-3 text-left font-semibold">Kategorie</th>
+        <th class="px-4 py-3 text-left font-semibold">Anforderungen bei 5 Sternen</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Sanitäranlagen</td>
+        <td class="px-4 py-3 text-gray-700">Mindestens 1 WC und 1 Dusche pro 25 Plätze, luxuriöse Ausstattung</td>
+      </tr>
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Stellplatzgröße</td>
+        <td class="px-4 py-3 text-gray-700">Mindestens 80 m², idealerweise 100+ m²</td>
+      </tr>
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Stromversorgung</td>
+        <td class="px-4 py-3 text-gray-700">Mindestens 10 Ampere an 50% der Plätze</td>
+      </tr>
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Einrichtungen</td>
+        <td class="px-4 py-3 text-gray-700">Schwimmbad, Restaurant, Laden, Animation</td>
+      </tr>
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Service</td>
+        <td class="px-4 py-3 text-gray-700">Mehrsprachiges Personal, Gästebetreuung</td>
+      </tr>
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Lage & Umgebung</td>
+        <td class="px-4 py-3 text-gray-700">Attraktive, ruhige Lage mit Erholungswert</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Besonders streng sind die Kriterien bei den **Sanitäreinrichtungen**: Ein 5-Sterne-Campingplatz muss nicht nur ausreichend Duschen und Toiletten bieten, sondern diese auch in höchster Qualität – oft mit Fußbodenheizung, Familienbädern und Baby-Pflegebereichen.
 
@@ -256,11 +284,34 @@ Die Premium-Stellplätze auf 5-Sterne-Campingplätzen bieten:
 
 Die Preise für 5-Sterne-Campingplätze in den Niederlanden variieren je nach Saison und Platz:
 
-| Saison | Stellplatz/Nacht (2 Pers.) | Mit privatem Sanitär |
-|--------|---------------------------|---------------------|
-| Nebensaison (März-Mai) | 25-40 € | 35-55 € |
-| Zwischensaison (Juni, Sept.) | 35-55 € | 50-75 € |
-| Hochsaison (Juli-August) | 45-70 € | 65-95 € |
+<div class="overflow-x-auto my-6">
+  <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+    <thead class="bg-green-600 text-white">
+      <tr>
+        <th class="px-4 py-3 text-left font-semibold">Saison</th>
+        <th class="px-4 py-3 text-left font-semibold">Stellplatz/Nacht (2 Pers.)</th>
+        <th class="px-4 py-3 text-left font-semibold">Mit privatem Sanitär</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Nebensaison (März-Mai)</td>
+        <td class="px-4 py-3 text-gray-700">25-40 €</td>
+        <td class="px-4 py-3 text-gray-700">35-55 €</td>
+      </tr>
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Zwischensaison (Juni, Sept.)</td>
+        <td class="px-4 py-3 text-gray-700">35-55 €</td>
+        <td class="px-4 py-3 text-gray-700">50-75 €</td>
+      </tr>
+      <tr class="hover:bg-green-50">
+        <td class="px-4 py-3 font-medium text-gray-900">Hochsaison (Juli-August)</td>
+        <td class="px-4 py-3 text-gray-700">45-70 €</td>
+        <td class="px-4 py-3 text-gray-700">65-95 €</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 **Zusätzliche Kosten:**
 - Kurtaxe: ca. 2-3 € pro Person/Nacht
