@@ -7,7 +7,7 @@ keyword: "airlineschiene camper"
 date: "2026-03-05"
 updatedAt: "2026-03-05"
 category: "vanlife-camper"
-image: "/images/airlineschiene-camper-guide.jpg"
+image: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=1200&h=630&fit=crop"
 featured: false
 tags: ["camper-ausbau", "ladungssicherung", "airlineschiene", "zurrschiene", "heckgarage"]
 author:

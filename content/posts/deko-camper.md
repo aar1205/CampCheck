@@ -1,12 +1,18 @@
 ---
-title: "Deko Camper: 12 kreative Ideen für dein gemütliches Zuhause auf Rädern"
-description: "Entdecke die besten Deko Camper Ideen für Wohnmobil, Van und Wohnwagen. Praktische Tipps, DIY-Anleitungen und kreative Inspiration für dein mobiles Zuhause."
-pubDate: 2026-03-05
+title: "Deko Camper: 12 kreative Ideen für dein gemütliches Zuhause"
+metaTitle: "Deko Camper (2026): 12 kreative Ideen & DIY-Tipps | CampCheck"
+excerpt: "Entdecke die besten Deko Camper Ideen für Wohnmobil, Van und Wohnwagen. Praktische Tipps, DIY-Anleitungen und kreative Inspiration für dein Zuhause."
+metaDescription: "Deko Camper Ideen für Wohnmobil, Van & Wohnwagen. Praktische Tipps, DIY-Anleitungen & kreative Inspiration für dein mobiles Zuhause."
+keyword: "deko camper"
+date: "2026-03-05"
+updatedAt: "2026-03-05"
+category: "vanlife-camper"
+image: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=1200&h=630&fit=crop"
+featured: false
+tags: ["camper-deko", "wohnmobil-einrichtung", "vanlife", "camping-tipps", "diy"]
 author:
   name: "Camping Stories Team"
-category: "vanlife-camper"
-tags: ["camper deko", "wohnmobil einrichtung", "vanlife", "camping tipps", "diy"]
-image: "/images/deko-camper-hero.jpg"
+readingTime: 13
 ---
 
 # Deko Camper: 12 kreative Ideen für dein gemütliches Zuhause auf Rädern

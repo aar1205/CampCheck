@@ -1,9 +1,15 @@
 ---
 title: "Camper Ausstellfenster: Der komplette Guide für Einbau & Kauf"
-description: "Alles über Camper Ausstellfenster: Typen, Hersteller wie Dometic & Carbest, Einbau-Anleitung & Kaufberatung. Finde das perfekte Fenster für deinen Camper-Ausbau."
+metaTitle: "Camper Ausstellfenster (2026): Einbau, Typen & Kaufberatung | CampCheck"
+excerpt: "Alles über Camper Ausstellfenster: Typen, Hersteller wie Dometic & Carbest, Einbau-Anleitung & Kaufberatung. Finde das perfekte Fenster für deinen Ausbau."
+metaDescription: "Camper Ausstellfenster: Typen, Hersteller, Einbau-Anleitung & Kaufberatung. Der komplette Guide für deinen Camper-Ausbau."
 keyword: "camper ausstellfenster"
-category: "vanlife-camper"
 date: "2026-03-05"
+updatedAt: "2026-03-05"
+category: "vanlife-camper"
+image: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=1200&h=630&fit=crop"
+featured: false
+tags: ["ausstellfenster", "camper-ausbau", "dometic", "fenster", "vanlife"]
 author:
   name: "Camping Stories Team"
 readingTime: 12

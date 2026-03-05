@@ -1,12 +1,18 @@
 ---
-title: "Albanien Camper mieten – Der ultimative Guide für deinen Roadtrip durch das Land der Adler"
-description: "Alles über Camper mieten in Albanien: Preise, Routen, Campingplätze, Wildcamping-Regeln & praktische Tipps für deinen perfekten Roadtrip durch das Land der Adler."
+title: "Albanien Camper mieten – Der ultimative Guide für deinen Roadtrip"
+metaTitle: "Albanien Camper mieten (2026): Routen, Tipps & Preise | CampCheck"
+excerpt: "Alles über Camper mieten in Albanien: Preise, Routen, Campingplätze, Wildcamping-Regeln & praktische Tipps für deinen perfekten Roadtrip."
+metaDescription: "Camper mieten in Albanien: Routen, Campingplätze, Preise & Wildcamping-Tipps. Dein kompletter Guide für den Roadtrip durch das Land der Adler."
+keyword: "albanien camper mieten"
+date: "2026-03-05"
+updatedAt: "2026-03-05"
+category: "campingplaetze"
+image: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=1200&h=630&fit=crop"
+featured: false
+tags: ["albanien", "camper", "roadtrip", "wohnmobil", "balkan"]
 author:
   name: "Camping Stories Team"
-date: "2026-03-05"
-categories: ["campingplaetze"]
-tags: ["albanien", "camper", "roadtrip", "wohnmobil", "balkan"]
-image: "/images/albanien-camper.jpg"
+readingTime: 13
 ---
 
 # Albanien Camper mieten – Der ultimative Guide für deinen Roadtrip durch das Land der Adler

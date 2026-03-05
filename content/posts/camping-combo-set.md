@@ -1,12 +1,18 @@
 ---
-title: "Camping Combo Set: Der komplette Guide zur perfekten Camping-Ausstattung"
-description: "Entdecke alles über Camping Combo Sets: Von Geschirr-Sets über Kochsets bis hin zu kompletten Camping-Ausstattungen. Mit Kaufratgeber, Vergleichstabelle und Experten-Tipps."
-date: 2026-03-05
-categories: ["ausruestung-gear"]
+title: "Camping Combo Set: Der komplette Guide zur perfekten Ausstattung"
+metaTitle: "Camping Combo Set (2026): Geschirr, Kochsets & mehr | CampCheck"
+excerpt: "Entdecke alles über Camping Combo Sets: Von Geschirr-Sets über Kochsets bis zu kompletten Camping-Ausstattungen. Mit Kaufratgeber & Experten-Tipps."
+metaDescription: "Camping Combo Set: Alles über Geschirr-Sets, Kochsets & komplette Ausstattungen. Mit Kaufratgeber, Vergleichstabelle & Experten-Tipps."
+keyword: "camping combo set"
+date: "2026-03-05"
+updatedAt: "2026-03-05"
+category: "ausruestung-gear"
+image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=1200&h=630&fit=crop"
+featured: false
 tags: ["camping", "geschirr", "kochset", "combo", "ausruestung"]
 author:
   name: "Camping Stories Team"
-image: "/images/camping-combo-set.jpg"
+readingTime: 11
 ---
 
 # Camping Combo Set: Der komplette Guide zur perfekten Camping-Ausstattung
