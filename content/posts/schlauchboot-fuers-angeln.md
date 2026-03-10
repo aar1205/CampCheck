@@ -1,10 +1,17 @@
 ---
 title: "Schlauchboot fürs Angeln: Der komplette Guide für Wasserangler"
-description: "Alles über Schlauchboote fürs Angeln: Kaufberatung, Materialien, Bodenarten, Sicherheit und Pflege. Finde das perfekte Angelboot für deine Bedürfnisse."
-category: "ausruestung-gear"
-author: "Camping Stories Team"
+metaTitle: "Schlauchboot fürs Angeln: Der komplette Guide (2026) | CampCheck"
+excerpt: "Alles über Schlauchboote fürs Angeln: Kaufberatung, Materialien, Bodenarten, Sicherheit und Pflege. Finde das perfekte Angelboot für deine Bedürfnisse."
+metaDescription: "Alles über Schlauchboote fürs Angeln: Kaufberatung, Materialien, Bodenarten, Sicherheit und Pflege. Finde das perfekte Angelboot für deine Bedürfnisse."
 date: "2026-03-10"
+updatedAt: "2026-03-10"
+category: "ausruestung-gear"
+image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&h=630&fit=crop"
+featured: true
 tags: ["schlauchboot", "angeln", "ausruestung", "boot", "outdoor"]
+author:
+  name: "Camping Stories Team"
+readingTime: 10
 ---
 
 # Schlauchboot fürs Angeln: Der komplette Guide für Wasserangler

@@ -1,10 +1,17 @@
 ---
 title: "Angeln Geschenkidee: Die besten Geschenke für Angler"
-description: "Du suchst die perfekte Angeln Geschenkidee? Wir zeigen dir praktische, lustige und persönliche Geschenke für Angler – von Anfängern bis Profis."
-category: "geschenke-inspiration"
-author: "Camping Stories Team"
+metaTitle: "Angeln Geschenkidee: Die besten Geschenke für Angler (2026) | CampCheck"
+excerpt: "Du suchst die perfekte Angeln Geschenkidee? Wir zeigen dir praktische, lustige und persönliche Geschenke für Angler – von Anfängern bis Profis."
+metaDescription: "Du suchst die perfekte Angeln Geschenkidee? Wir zeigen dir praktische, lustige und persönliche Geschenke für Angler – von Anfängern bis Profis."
 date: "2026-03-10"
+updatedAt: "2026-03-10"
+category: "geschenke-inspiration"
+image: "https://images.unsplash.com/photo-1516962126636-27ad087061cc?w=1200&h=630&fit=crop"
+featured: true
 tags: ["Angeln", "Geschenke", "Outdoor", "Geschenkideen", "Angler"]
+author:
+  name: "Camping Stories Team"
+readingTime: 9
 ---
 
 # Angeln Geschenkidee: Die besten Geschenke für Angler

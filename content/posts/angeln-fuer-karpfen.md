@@ -1,11 +1,17 @@
 ---
 title: "Angeln für Karpfen: Der komplette Einsteiger-Guide"
-description: "Du möchtest Karpfen angeln? Dieser Guide zeigt dir alles über Ausrüstung, Köder, Techniken und die besten Stellen. Perfekt für Anfänger!"
-category: "outdoor-aktivitaeten"
-author: "Camping Stories Team"
+metaTitle: "Angeln für Karpfen: Der komplette Einsteiger-Guide (2026) | CampCheck"
+excerpt: "Du möchtest Karpfen angeln? Dieser Guide zeigt dir alles über Ausrüstung, Köder, Techniken und die besten Stellen. Perfekt für Anfänger!"
+metaDescription: "Du möchtest Karpfen angeln? Dieser Guide zeigt dir alles über Ausrüstung, Köder, Techniken und die besten Stellen. Perfekt für Anfänger!"
 date: "2026-03-10"
+updatedAt: "2026-03-10"
+category: "camping-grundlagen"
+image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&h=630&fit=crop"
+featured: true
 tags: ["angeln", "karpfen", "fischen", "outdoor", "freizeit"]
-image: "/images/angeln-karpfen.jpg"
+author:
+  name: "Camping Stories Team"
+readingTime: 10
 ---
 
 # Angeln für Karpfen: Der komplette Einsteiger-Guide
