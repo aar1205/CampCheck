@@ -10,17 +10,31 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
-  // Generate JSON-LD structured data for SEO
+  // Generate JSON-LD structured data for SEO (BreadcrumbList)
+  // https://developers.google.com/search/docs/appearance/structured-data/breadcrumb
   const generateJsonLd = () => {
     const baseUrl = 'https://camp-check.com';
-    const itemListElement = items
-      .filter(item => item.href) // Only include items with href
-      .map((item, index) => ({
+    
+    const itemListElement = items.map((item, index) => {
+      const listItem: {
+        '@type': 'ListItem';
+        position: number;
+        name: string;
+        item?: string;
+      } = {
         '@type': 'ListItem',
         position: index + 1,
         name: item.name,
-        item: `${baseUrl}${item.href}`,
-      }));
+      };
+
+      // Include item URL for all items except the last one
+      // For the last item, Google will use the current page URL automatically
+      if (item.href) {
+        listItem.item = `${baseUrl}${item.href}`;
+      }
+
+      return listItem;
+    });
 
     return {
       '@context': 'https://schema.org',
@@ -31,13 +45,13 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
 
   return (
     <>
-      {/* JSON-LD Structured Data */}
+      {/* JSON-LD Structured Data for Breadcrumbs */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateJsonLd()) }}
       />
 
-      {/* Breadcrumb Navigation */}
+      {/* Visual Breadcrumb Navigation */}
       <nav aria-label="Breadcrumb" className="py-3">
         <ol className="flex items-center gap-2 text-sm text-gray-600">
           {items.map((item, index) => {

@@ -133,6 +133,54 @@ export default async function Home() {
       {/* Newsletter Section */}
       <Newsletter />
 
+      {/* Article Archive Section - HTML Sitemap for SEO */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Alle <span className="text-[var(--color-pine)]">{allPosts.length}</span> Artikel im Überblick
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Unsere komplette Artikel-Sammlung zum Durchstöbern. Finde genau das, wonach du suchst.
+            </p>
+          </div>
+
+          {/* Article Links Grid - HTML Sitemap */}
+          <div className="bg-white rounded-2xl shadow-lg p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {allPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  <span className="text-[var(--color-pine)] mt-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700 group-hover:text-[var(--color-pine)] transition-colors line-clamp-2 text-sm">
+                    {post.title}
+                  </span>
+                </Link>
+              ))}
+            </div>
+            
+            <div className="mt-8 pt-6 border-t border-gray-200 text-center">
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-pine)] text-white font-semibold rounded-lg hover:bg-[var(--color-forest)] transition-colors"
+              >
+                <span>Alle Artikel mit Vorschau</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Checklisten Teaser Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
