@@ -1,13 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- Hintergrund - Dunkles Forest Green -->
-  <rect width="100" height="100" rx="18" fill="#1e3a2f"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Hintergrund -->
+  <rect width="512" height="512" rx="128" fill="#0f766e"/>
   
-  <!-- Abstrakte Zelt-Form -->
-  <path d="M50 22 L78 78 L22 78 Z" fill="#f5f5f5"/>
+  <!-- Bodenlinie -->
+  <rect x="64" y="384" width="384" height="32" rx="16" fill="#134e4a"/>
   
-  <!-- Eingang als Cutout -->
-  <path d="M50 48 L62 78 L38 78 Z" fill="#1e3a2f"/>
+  <!-- Zelt -->
+  <path d="M256 96 L416 384 L96 384 Z" fill="#f0fdfa"/>
   
-  <!-- Dezente Akzentlinie -->
-  <line x1="50" y1="22" x2="50" y2="78" stroke="#10b981" stroke-width="2"/>
+  <!-- Zelt Schatten/Detail -->
+  <path d="M256 96 L416 384 L256 384 Z" fill="#ccfbf1"/>
+  
+  <!-- Zelt Eingang -->
+  <path d="M256 192 L336 384 L176 384 Z" fill="#0f766e"/>
+  
+  <!-- Zelt Eingang Inneres -->
+  <path d="M256 224 L304 384 L208 384 Z" fill="#134e4a"/>
+  
+  <!-- Zelt Pfosten (links) -->
+  <rect x="100" y="384" width="24" height="48" rx="4" fill="#f0fdfa"/>
+  
+  <!-- Zelt Pfosten (rechts) -->
+  <rect x="388" y="384" width="24" height="48" rx="4" fill="#f0fdfa"/>
+  
+  <!-- Kleiner Baum (links) -->
+  <path d="M80 384 L80 280 L48 320 L80 280 L112 320 L80 280" stroke="#134e4a" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="80" cy="256" r="32" fill="#14b8a6"/>
+  
+  <!-- Sonne/Mond (oben rechts) -->
+  <circle cx="416" cy="128" r="48" fill="#fde047"/>
+  <circle cx="416" cy="128" r="40" fill="#fef08a"/>
 </svg>

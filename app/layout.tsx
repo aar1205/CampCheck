@@ -39,19 +39,23 @@ export const metadata: Metadata = {
   publisher: "CampCheck",
   icons: {
     icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.svg", type: "image/svg+xml", sizes: "any" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
+    shortcut: "/favicon-32x32.png",
     apple: [
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
     other: [
       {
         rel: "mask-icon",
         url: "/icon.svg",
-        color: "#1e3a2f",
+        color: "#0f766e",
       },
     ],
   },
+  manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
     locale: "de_DE",
@@ -65,7 +69,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "CampCheck",
+        alt: "CampCheck - Dein Camping Guide",
       },
     ],
   },
@@ -87,6 +91,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+
 };
 
 export default function RootLayout({
