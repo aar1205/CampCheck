@@ -2,43 +2,32 @@
   <!-- Hintergrund -->
   <rect width="512" height="512" rx="128" fill="#0f766e"/>
   
-  <!-- Boden -->
-  <rect x="32" y="416" width="448" height="64" rx="16" fill="#115e59"/>
+  <!-- Bodenlinie -->
+  <rect x="64" y="384" width="384" height="32" rx="16" fill="#134e4a"/>
   
-  <!-- Linker Zelt-Pfosten -->
-  <rect x="112" y="176" width="24" height="256" rx="4" fill="#fef3c7"/>
+  <!-- Zelt -->
+  <path d="M256 96 L416 384 L96 384 Z" fill="#f0fdfa"/>
   
-  <!-- Rechter Zelt-Pfosten -->
-  <rect x="376" y="176" width="24" height="256" rx="4" fill="#fef3c7"/>
+  <!-- Zelt Schatten/Detail -->
+  <path d="M256 96 L416 384 L256 384 Z" fill="#ccfbf1"/>
   
-  <!-- Mittlerer Pfosten (hinter dem Eingang) -->
-  <rect x="244" y="80" width="24" height="352" rx="4" fill="#fde68a"/>
+  <!-- Zelt Eingang -->
+  <path d="M256 192 L336 384 L176 384 Z" fill="#0f766e"/>
   
-  <!-- Zelt-Dach links -->
-  <path d="M124 176 L256 48 L256 176 Z" fill="#f0fdfa"/>
+  <!-- Zelt Eingang Inneres -->
+  <path d="M256 224 L304 384 L208 384 Z" fill="#134e4a"/>
   
-  <!-- Zelt-Dach rechts -->
-  <path d="M388 176 L256 48 L256 176 Z" fill="#ccfbf1"/>
+  <!-- Zelt Pfosten (links) -->
+  <rect x="100" y="384" width="24" height="48" rx="4" fill="#f0fdfa"/>
   
-  <!-- Zelt-Seitenwand links -->
-  <path d="M124 176 L124 416 L256 416 L256 176 Z" fill="#f0fdfa"/>
+  <!-- Zelt Pfosten (rechts) -->
+  <rect x="388" y="384" width="24" height="48" rx="4" fill="#f0fdfa"/>
   
-  <!-- Zelt-Seitenwand rechts -->
-  <path d="M388 176 L388 416 L256 416 L256 176 Z" fill="#ccfbf1"/>
+  <!-- Kleiner Baum (links) -->
+  <path d="M80 384 L80 280 L48 320 L80 280 L112 320 L80 280" stroke="#134e4a" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="80" cy="256" r="32" fill="#14b8a6"/>
   
-  <!-- Eingang (dunkler Bereich) -->
-  <path d="M192 416 L192 256 L256 160 L320 256 L320 416 Z" fill="#134e4a"/>
-  
-  <!-- Eingang Innenraum -->
-  <path d="M210 416 L210 270 L256 208 L302 270 L302 416 Z" fill="#0f766e"/>
-  
-  <!-- Zelt-Boden vor dem Eingang -->
-  <rect x="192" y="400" width="128" height="16" rx="2" fill="#fef3c7"/>
-  
-  <!-- Kleine Fahne auf dem Zelt -->
-  <line x1="256" y1="48" x2="256" y2="24" stroke="#fde68a" stroke-width="4" stroke-linecap="round"/>
-  <path d="M256 24 L290 36 L256 48 Z" fill="#ef4444"/>
-  
-  <!-- Sonne -->
-  <circle cx="400" cy="100" r="40" fill="#fde047"/>
+  <!-- Sonne/Mond (oben rechts) -->
+  <circle cx="416" cy="128" r="48" fill="#fde047"/>
+  <circle cx="416" cy="128" r="40" fill="#fef08a"/>
 </svg>
