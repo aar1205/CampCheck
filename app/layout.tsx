@@ -37,6 +37,21 @@ export const metadata: Metadata = {
   authors: [{ name: "CampCheck Team" }],
   creator: "CampCheck",
   publisher: "CampCheck",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/icon.svg",
+        color: "#1e3a2f",
+      },
+    ],
+  },
   openGraph: {
     type: "website",
     locale: "de_DE",
