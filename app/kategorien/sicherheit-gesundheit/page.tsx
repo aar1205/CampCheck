@@ -480,7 +480,7 @@ export default async function SicherheitGesundheitPage() {
           </p>
 
           <h3 className="text-xl font-semibold mb-3 text-gray-800">Krankheiten durch Insekten: Übersicht</h3>
-          <div class="overflow-x-auto mb-6">
+          <div className="overflow-x-auto mb-6">
             <table className="min-w-full border-collapse border border-gray-300">
               <thead>
                 <tr className="bg-gray-100">
