@@ -99,14 +99,14 @@ export default function Header() {
             </Link>
 
             <Link
-              href="/blog"
+              href="/archiv"
               className={`font-semibold transition-colors tracking-tight ${
                 showSolidHeader
                   ? 'text-charcoal hover:text-amber-dark'
                   : 'text-paper hover:text-amber-light'
               }`}
             >
-              Blog
+              Archiv
             </Link>
 
             {/* Categories Dropdown */}
@@ -288,7 +288,7 @@ export default function Header() {
               </Link>
 
               <Link
-                href="/blog"
+                href="/archiv"
                 className={`px-4 py-3 rounded-sm transition-colors font-semibold ${
                   showSolidHeader
                     ? 'text-charcoal hover:bg-amber/10 hover:text-amber-dark'
@@ -296,7 +296,7 @@ export default function Header() {
                 }`}
                 onClick={handleLinkClick}
               >
-                Blog
+                Archiv
               </Link>
 
               {/* Mobile Categories */}

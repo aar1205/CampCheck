@@ -84,7 +84,7 @@ export default function ArticleCard({ post, variant = 'default' }: ArticleCardPr
       <div className={cardClasses[variant]}>
         {/* Image Section */}
         <div className={imageContainerClasses[variant]}>
-          <Link href={`/blog/${post.slug}`}>
+          <Link href={`/kategorien/${post.category}/${post.slug}`}>
             <Image
               src={post.image}
               alt={post.title}
@@ -131,7 +131,7 @@ export default function ArticleCard({ post, variant = 'default' }: ArticleCardPr
 
           {/* Title */}
           <TitleTag>
-            <Link href={`/blog/${post.slug}`} className={titleClasses[variant]}>
+            <Link href={`/kategorien/${post.category}/${post.slug}`} className={titleClasses[variant]}>
               {post.title}
             </Link>
           </TitleTag>

@@ -20,7 +20,16 @@ Stell dir vor: Der Wind weht sanft vom Meer herüber, dein Hund rennt voller Fre
 
 Vor drei Jahren habe ich mit meinem Labrador Balou das erste Mal einen Campingurlaub in Zeeland gemacht. Was mich am meisten überrascht hat? Wie unkompliziert die Niederländer mit Hunden umgehen. Hier ist dein vierbeiniger Begleiter nicht nur geduldet, sondern willkommen. Von hundefreundlichen Stränden über spezielle Hunde-Duschen auf dem Platz bis zu kilometerlangen Wanderwegen durch die Dünen – Holland versteht sich als echtes Hundeland.
 
-Auf unserer [Startseite](/) findest du übrigens noch mehr inspirierende Camping-Guides und Reiseberichte für deinen nächsten Urlaub.
+<div class="my-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+  <p class="text-gray-800">
+    <strong class="text-blue-700">Übersicht:</strong> 
+    Dieser Artikel ist Teil unserer 
+    <a href="/kategorien/camping-familie">Camping mit Familie</a> und 
+    <a href="/kategorien/campingplaetze">Campingplätze</a> Guides.
+    <br>
+    <a href="/">Zurück zur Startseite</a>
+  </p>
+</div>
 
 In diesem Guide zeige ich dir die 12 besten Campingplätze direkt am Meer, verrate dir die schönsten Hundestrände und gebe dir alle Infos mit, die du für eine entspannte Reise brauchst. Von Einreisebestimmungen über Packlisten bis hin zu Tierarzt-Adressen vor Ort – hier findest du alles für den perfekten Urlaub mit deinem Hund.
 
@@ -632,7 +641,27 @@ Ein Campingurlaub mit Hund in Holland am Meer ist eine wunderbare Erfahrung. Die
 
 Die 12 vorgestellten Campingplätze bieten für jeden Geschmack das Richtige – ob du lieber im pulsierenden Roompot Beach Resort urlaubst oder die Ruhe des kleinen Strandcamping Groede suchst. Die gute Infrastruktur mit Tierarztpraxen, gut ausgeschilderten Hundestränden und hundefreundlichen Restaurants sorgt für entspannte Tage.
 
-Mehr zum Thema findest du in unserer Kategorie [Camping mit Hund](/kategorien/camping-familie), wo wir weitere Guides zu verschiedenen Regionen und Ländern veröffentlichen.
+<div class="my-6 p-4 bg-purple-50 border-l-4 border-purple-400 rounded-r-lg">
+  <p class="text-gray-800">
+    <strong class="text-purple-700">Das könnte dich auch interessieren:</strong>
+  </p>
+  <ul class="list-disc ml-5 mt-2">
+    <li><a href="/kategorien/camping-familie/mit-hund-campen">Mit Hund campen: Der komplette Guide</a></li>
+    <li><a href="/kategorien/camping-familie/camping-korsika-mit-kindern">Camping in Korsika mit Kindern</a></li>
+    <li><a href="/kategorien/camping-familie/outdoor-spiele">Outdoor-Spiele für die ganze Familie</a></li>
+  </ul>
+</div>
+
+<div class="my-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+  <p class="text-gray-800">
+    <strong class="text-blue-700">Übersicht:</strong> 
+    Dieser Artikel ist Teil unserer 
+    <a href="/kategorien/camping-familie">Camping mit Familie</a> und 
+    <a href="/kategorien/campingplaetze">Campingplätze</a> Guides.
+    <br>
+    <a href="/">Zurück zur Startseite</a>
+  </p>
+</div>
 
 **Dein nächster Schritt:** Pack die Leine ein, buche einen der empfohlenen Campingplätze und freu dich auf unvergessliche Strandtage mit deinem besten Freund. Die Nordsee wartet schon!
 

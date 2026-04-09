@@ -4,12 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
-import { getPostBySlug, Post } from '@/lib/posts';
+import { getPostBySlug, getAllPosts, Post } from '@/lib/posts';
 import { getCategoryBySlug } from '@/lib/categories';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CategoryIcon from '@/components/CategoryIcon';
 import TableOfContents from '@/components/TableOfContents';
 import RelatedPosts from '@/components/RelatedPosts';
+import PillarSidebar from '@/components/PillarSidebar';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
@@ -21,19 +22,32 @@ export function generateStaticParams() {
   }
   
   const fileNames = fs.readdirSync(postsDirectory);
-  const slugs = fileNames
-    .filter(fileName => fileName.endsWith('.md'))
-    .map(fileName => ({
-      slug: fileName.replace(/\.md$/, ''),
-    }));
+  const params: { pillar: string; cluster: string }[] = [];
   
-  return slugs;
+  for (const fileName of fileNames) {
+    if (fileName.endsWith('.md')) {
+      const cluster = fileName.replace(/\.md$/, '');
+      // We'll need to determine the pillar from the file content
+      // For now, create params that will be validated at runtime
+      const fullPath = path.join(postsDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      
+      // Extract category from frontmatter
+      const categoryMatch = fileContents.match(/^category:\s*["']?([^"'\n]+)["']?$/m);
+      if (categoryMatch) {
+        const pillar = categoryMatch[1].trim();
+        params.push({ pillar, cluster });
+      }
+    }
+  }
+  
+  return params;
 }
 
 // Generate metadata for SEO
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  const post = await getPostBySlug(slug);
+export async function generateMetadata({ params }: { params: Promise<{ pillar: string; cluster: string }> }): Promise<Metadata> {
+  const { cluster } = await params;
+  const post = await getPostBySlug(cluster);
 
   if (!post) {
     return {
@@ -242,11 +256,16 @@ function escapeHtml(text: string): string {
     .replace(/'/g, '&#039;');
 }
 
-export default async function BlogArticlePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const post = await getPostBySlug(slug);
+export default async function ClusterArticlePage({ params }: { params: Promise<{ pillar: string; cluster: string }> }) {
+  const { pillar, cluster } = await params;
+  const post = await getPostBySlug(cluster);
 
   if (!post) {
+    notFound();
+  }
+
+  // Verify that the post belongs to the specified pillar/category
+  if (post.category !== pillar) {
     notFound();
   }
 
@@ -291,6 +310,22 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
     timeRequired: `PT${post.readingTime}M`,
   };
 
+  // Category colors synchronized with CategoryCard.tsx
+  const categoryColors: Record<string, string> = {
+    'camping-grundlagen': 'bg-green-700',
+    'geschenke-inspiration': 'bg-amber-600',
+    'vanlife-camper': 'bg-stone-700',
+    'nachhaltigkeit': 'bg-emerald-700',
+    'sicherheit-gesundheit': 'bg-orange-700',
+    'ausruestung-gear': 'bg-slate-600',
+    'zelte-schlafen': 'bg-indigo-900',
+    'camping-kueche': 'bg-amber-700',
+    'camping-familie': 'bg-yellow-700',
+    'wildcamping': 'bg-green-800',
+    'campingplaetze': 'bg-yellow-600',
+    'sonstiges': 'bg-violet-600'
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -303,30 +338,18 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="-mt-8 relative z-10">
             <div className="bg-white rounded-lg shadow-lg px-6 py-4 inline-block">
-              <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog' }, ...(category ? [{ name: category.name, href: `/kategorien/${category.slug}` }] : []), { name: post.title }]} />
+              <Breadcrumbs items={[
+                { name: 'Home', href: '/' },
+                { name: 'Kategorien', href: '/kategorien' },
+                ...(category ? [{ name: category.name, href: `/kategorien/${category.slug}` }] : []),
+                { name: post.title }
+              ]} />
             </div>
           </div>
 
           <header className="max-w-4xl mx-auto mt-8 mb-12">
             {category && (
-              <Link href={`/kategorien/${category.slug}`} className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-white font-semibold hover:opacity-90 transition-colors mb-6 ${(() => {
-                // Category colors synchronized with CategoryCard.tsx
-                const colors: Record<string, string> = {
-                  'camping-grundlagen': 'bg-green-700',
-                  'geschenke-inspiration': 'bg-amber-600',
-                  'vanlife-camper': 'bg-stone-700',
-                  'nachhaltigkeit': 'bg-emerald-700',
-                  'sicherheit-gesundheit': 'bg-orange-700',
-                  'ausruestung-gear': 'bg-slate-600',
-                  'zelte-schlafen': 'bg-indigo-900',
-                  'camping-kueche': 'bg-amber-700',
-                  'camping-familie': 'bg-yellow-700',
-                  'wildcamping': 'bg-green-800',
-                  'campingplaetze': 'bg-yellow-600',
-                  'sonstiges': 'bg-violet-600'
-                };
-                return colors[category.slug] || 'bg-stone-600';
-              })()}`}>
+              <Link href={`/kategorien/${category.slug}`} className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-white font-semibold hover:opacity-90 transition-colors mb-6 ${categoryColors[category.slug] || 'bg-stone-600'}`}>
                 <CategoryIcon name={category.icon} size={20} />
                 <span>{category.name}</span>
               </Link>
@@ -386,8 +409,9 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
             </main>
 
             <aside className="lg:w-80 flex-shrink-0">
-              <div className="lg:sticky lg:top-24">
+              <div className="lg:sticky lg:top-24 space-y-6">
                 <TableOfContents items={headings} />
+                <PillarSidebar currentCategory={post.category} />
               </div>
             </aside>
           </div>

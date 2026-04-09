@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 interface BreadcrumbItem {
   name: string;
-  href?: string; // optional, last item won't have href
+  href?: string;
 }
 
 interface BreadcrumbsProps {
@@ -14,7 +14,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   // https://developers.google.com/search/docs/appearance/structured-data/breadcrumb
   const generateJsonLd = () => {
     const baseUrl = 'https://camp-check.com';
-    
+
     const itemListElement = items.map((item, index) => {
       const listItem: {
         '@type': 'ListItem';
@@ -53,16 +53,17 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
 
       {/* Visual Breadcrumb Navigation */}
       <nav aria-label="Breadcrumb" className="py-3">
-        <ol className="flex items-center gap-2 text-sm text-gray-600">
+        <ol className="flex flex-wrap items-center gap-1 text-sm">
           {items.map((item, index) => {
             const isLast = index === items.length - 1;
+            const isFirst = index === 0;
 
             return (
               <li key={index} className="flex items-center">
                 {/* Chevron Separator (except for first item) */}
-                {index > 0 && (
+                {!isFirst && (
                   <svg
-                    className="w-4 h-4 mx-2 text-gray-400"
+                    className="w-4 h-4 mx-1 sm:mx-2 text-gray-400 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -81,8 +82,9 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
                 {isLast ? (
                   // Current page (last item) - not linked, styled differently
                   <span
-                    className="font-medium text-gray-900"
+                    className="font-medium text-gray-900 px-2 py-1 rounded bg-gray-100/50 truncate max-w-[150px] sm:max-w-[200px] md:max-w-[300px]"
                     aria-current="page"
+                    title={item.name}
                   >
                     {item.name}
                   </span>
@@ -90,9 +92,32 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
                   // Linked breadcrumb item
                   <Link
                     href={item.href || '/'}
-                    className="hover:text-[var(--color-pine)] transition-colors duration-200 hover:underline"
+                    className={`
+                      text-gray-600 hover:text-green-700 
+                      transition-colors duration-200 
+                      hover:underline underline-offset-2
+                      px-2 py-1 rounded hover:bg-green-50
+                      truncate max-w-[120px] sm:max-w-[150px] md:max-w-[200px]
+                      ${isFirst ? 'flex items-center gap-1' : ''}
+                    `}
+                    title={item.name}
                   >
-                    {item.name}
+                    {isFirst && (
+                      <svg
+                        className="w-4 h-4 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                        />
+                      </svg>
+                    )}
+                    <span className="truncate">{item.name}</span>
                   </Link>
                 )}
               </li>

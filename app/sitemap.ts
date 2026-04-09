@@ -16,10 +16,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
-      url: `${baseUrl}/blog`,
+      url: `${baseUrl}/archiv`,
       lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.9,
+      changeFrequency: 'weekly',
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/kategorien`,
@@ -59,23 +59,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Dynamic blog posts
+  // Get all posts for cluster pages
   const posts = await getAllPosts();
-  const postPages: MetadataRoute.Sitemap = posts.map(post => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+  
+  // Cluster pages: /kategorien/[pillar]/[cluster]
+  const clusterPages: MetadataRoute.Sitemap = posts.map(post => ({
+    url: `${baseUrl}/kategorien/${post.category}/${post.slug}`,
     lastModified: new Date(post.updatedAt || post.publishedAt),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }));
 
-  // Dynamic category pages
+  // Pillar pages: /kategorien/[pillar]
   const categories = getAllCategories();
-  const categoryPages: MetadataRoute.Sitemap = categories.map(category => ({
+  const pillarPages: MetadataRoute.Sitemap = categories.map(category => ({
     url: `${baseUrl}/kategorien/${category.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }));
 
-  return [...staticPages, ...postPages, ...categoryPages];
+  return [...staticPages, ...pillarPages, ...clusterPages];
 }

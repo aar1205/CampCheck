@@ -4,7 +4,7 @@ metaTitle: "Kleinster Camper mit WC und Dusche (2026) | CampCheck"
 excerpt: "Welcher ist der kleinste Camper mit WC und Dusche? Wir zeigen dir die kompaktesten Modelle ab 4,90m mit allen Vor- und Nachteilen."
 metaDescription: "Der kleinste Camper mit WC und Dusche: Modelle ab 4,90m im Vergleich. Technische Daten, Größen-Kategorien und Kaufberatung für kompaktes Campen."
 date: "2026-02-21"
-updatedAt: "2026-02-21"
+updatedAt: "2026-04-09"
 category: "vanlife-camper"
 image: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=1200&h=630&fit=crop"
 featured: true
@@ -16,6 +16,11 @@ readingTime: 8
 
 # Kleinster Camper mit WC und Dusche: Die kompaktesten Modelle 2026
 
+<div class="my-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+  <p class="text-gray-800"><strong class="text-blue-700">Mehr zum Thema Vanlife & Camper:</strong></p>
+  <p class="text-gray-700 mt-1">Entdecke weitere spannende Guides, Ausbau-Tipps und Inspirationen für dein mobiles Zuhause in unserer Kategorie <a href="/kategorien/vanlife-camper" class="text-blue-600 hover:text-blue-800 underline font-medium">Vanlife & Camper</a>.</p>
+</div>
+
 **Lesezeit: 12 Minuten**
 
 ## Einleitung
@@ -25,6 +30,14 @@ Du träumst von der Freiheit des Campings, aber ohne auf Komfort verzichten zu m
 Die gute Nachricht: Es gibt mittlerweile Camper, die beides vereinen – kompakte Abmessungen für Alltag und enge Straßen UND ein vollwertiges Bad mit WC und Dusche. Die Frage ist nur: Wie klein kann so ein Camper tatsächlich sein?
 
 Falls du gerade erst mit dem Camping anfängst: Auf unserer [Startseite](/) findest du alle Grundlagen für deine ersten Touren.
+
+<div class="my-6 p-4 bg-purple-50 border-l-4 border-purple-400 rounded-r-lg">
+  <p class="text-gray-800"><strong class="text-purple-700">Verwandte Artikel:</strong></p>
+  <ul class="text-gray-700 mt-1 list-disc list-inside">
+    <li><a href="/posts/berlingo-als-camper" class="text-purple-600 hover:text-purple-800 underline">Berlingo als Camper: Kompletter Ausbau-Guide</a></li>
+    <li><a href="/posts/camping-im-pkw" class="text-purple-600 hover:text-purple-800 underline">Camping im PKW: Der ultimative Guide fürs Übernachten im Auto</a></li>
+  </ul>
+</div>
 
 **In diesem Guide lernst du:**
 
@@ -377,7 +390,10 @@ Der Traum vom kompakten Camper mit WC und Dusche ist längst Realität. Der **VW
 - Ab 6,36 Metern gibt es echte Duschkabinen
 - Ford Transit Custom und VW T6.1 sind die besten Basisfahrzeuge
 
-Mehr spannende Themen rund um Vanlife und Camper findest du in unserer Kategorie [Vanlife & Camper](/kategorien/vanlife-camper).
+<div class="my-6 p-4 bg-green-50 border-l-4 border-green-400 rounded-r-lg">
+  <p class="text-gray-800"><strong class="text-green-700">Weitere Camper-Themen entdecken:</strong></p>
+  <p class="text-gray-700 mt-1">Entdecke mehr Guides zum Thema Vanlife, Camper-Ausbau und mobilem Wohnen in unserer Kategorie <a href="/kategorien/vanlife-camper" class="text-green-600 hover:text-green-800 underline font-medium">Vanlife & Camper</a>. Dort findest du Tipps zu Ausstattung, Umbau und den besten Reisezielen.</p>
+</div>
 
 **Dein nächster Schritt:** Überlege, welche Größenkategorie zu deinem Lebensstil passt. Möchtest du den Camper alltagstauglich nutzen? Dann bleib unter 5 Metern. Oder geht es dir nur um die Urlaubsfreiheit? Dann kann es auch etwas größer sein.
 

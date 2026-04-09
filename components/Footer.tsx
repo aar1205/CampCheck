@@ -33,18 +33,18 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <Link
-                  href="/blog"
-                  className="text-sm text-parchment hover:text-amber-light transition-colors "
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/kategorien"
                   className="text-sm text-parchment hover:text-amber-light transition-colors "
                 >
                   Kategorien
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/archiv"
+                  className="text-sm text-parchment hover:text-amber-light transition-colors "
+                >
+                  Archiv
                 </Link>
               </li>
               <li>
