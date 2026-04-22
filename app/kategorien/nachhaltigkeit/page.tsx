@@ -1,3 +1,4 @@
+import CategoryPosts from '@/components/CategoryPosts';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import PillarSidebar from '@/components/PillarSidebar';
@@ -796,6 +797,7 @@ export default async function NachhaltigkeitPage() {
           })
         }}
       />
+          <CategoryPosts categorySlug="nachhaltigkeit" />
         </main>
         <PillarSidebar currentCategory="nachhaltigkeit" />
       </div>

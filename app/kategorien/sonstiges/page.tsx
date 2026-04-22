@@ -1,3 +1,4 @@
+import CategoryPosts from '@/components/CategoryPosts';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import PillarSidebar from '@/components/PillarSidebar';
@@ -798,6 +799,7 @@ export default async function SonstigesPage() {
           })
         }}
       />
+          <CategoryPosts categorySlug="sonstiges" />
         </main>
         <PillarSidebar currentCategory="sonstiges" />
       </div>

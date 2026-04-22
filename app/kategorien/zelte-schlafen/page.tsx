@@ -1,3 +1,4 @@
+import CategoryPosts from '@/components/CategoryPosts';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import PillarSidebar from '@/components/PillarSidebar';
@@ -781,6 +782,7 @@ export default async function ZelteSchlafenPage() {
           })
         }}
       />
+          <CategoryPosts categorySlug="zelte-schlafen" />
         </main>
         <PillarSidebar currentCategory="zelte-schlafen" />
       </div>

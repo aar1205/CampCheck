@@ -1,3 +1,4 @@
+import CategoryPosts from '@/components/CategoryPosts';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import PillarSidebar from '@/components/PillarSidebar';
@@ -811,6 +812,7 @@ export default async function SicherheitGesundheitPage() {
           })
         }}
       />
+          <CategoryPosts categorySlug="sicherheit-gesundheit" />
         </main>
         <PillarSidebar currentCategory="sicherheit-gesundheit" />
       </div>

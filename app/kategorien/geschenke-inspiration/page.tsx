@@ -1,3 +1,4 @@
+import CategoryPosts from '@/components/CategoryPosts';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import PillarSidebar from '@/components/PillarSidebar';
@@ -750,6 +751,7 @@ export default async function GeschenkeInspirationPage() {
           })
         }}
       />
+          <CategoryPosts categorySlug="geschenke-inspiration" />
         </main>
         <PillarSidebar currentCategory="geschenke-inspiration" />
       </div>
