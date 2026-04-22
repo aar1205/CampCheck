@@ -1,13 +1,13 @@
-import { redirect, notFound } from 'next/navigation';
-import { getPostBySlug, getAllPosts } from '@/lib/posts';
 import fs from 'fs';
 import path from 'path';
+import matter from 'gray-matter';
+import { notFound } from 'next/navigation';
+import { getPostBySlug } from '@/lib/posts';
+import ArticleRedirect from './ArticleRedirect';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
-// Generate static params for all posts at build time
 export function generateStaticParams() {
-  // Read directory synchronously for static export
   if (!fs.existsSync(postsDirectory)) {
     return [];
   }
@@ -30,6 +30,6 @@ export default async function BlogRedirect({ params }: { params: Promise<{ slug:
     return notFound();
   }
   
-  // Redirect to new URL structure: /kategorien/[pillar]/[cluster]
-  redirect(`/kategorien/${post.category}/${slug}`);
+  const targetUrl = `/kategorien/${post.category}/${slug}`;
+  return <ArticleRedirect to={targetUrl} />;
 }

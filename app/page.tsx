@@ -54,7 +54,7 @@ export default async function Home() {
             
             {/* Modern CTA Button */}
             <Link
-              href="/blog"
+              href="/archiv"
               className="group inline-flex items-center gap-3 px-8 py-4 bg-gray-900 hover:bg-[var(--color-pine)] text-white font-semibold rounded-2xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 flex-shrink-0"
             >
               <span>Alle Artikel</span>
@@ -87,7 +87,7 @@ export default async function Home() {
             <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
               <span className="text-gray-600">Noch nicht gefunden, was du suchst?</span>
               <Link
-                href="/blog"
+                href="/archiv"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-beige)] hover:bg-[var(--color-amber)] text-[var(--color-forest)] font-semibold rounded-xl transition-all duration-300"
               >
                 <span>Alle Artikel durchsuchen</span>
